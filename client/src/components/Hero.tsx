@@ -14,7 +14,7 @@ export function Hero() {
       >
         <img
           src={heroBg}
-          alt="Nordic Estate Hero"
+          alt="Accordance Hero"
           className="w-full h-full object-cover opacity-80"
         />
         {/* Gradient Overlay for Text Contrast */}

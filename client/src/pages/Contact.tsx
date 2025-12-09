@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 
 export default function Contact() {
@@ -103,7 +104,7 @@ export default function Contact() {
                 <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-muted-foreground">Headquarters</h3>
                 <p className="text-2xl font-medium mb-2">Stockholm</p>
                 <p className="text-lg text-muted-foreground">Normalm 42<br/>111 47 Stockholm<br/>Sweden</p>
-                <a href="mailto:sth@nordicestate.com" className="inline-block mt-4 text-lg underline decoration-1 underline-offset-4 hover:no-underline">sth@nordicestate.com</a>
+                <a href="mailto:sth@accordance.com" className="inline-block mt-4 text-lg underline decoration-1 underline-offset-4 hover:no-underline">sth@accordance.com</a>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -121,6 +122,7 @@ export default function Contact() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

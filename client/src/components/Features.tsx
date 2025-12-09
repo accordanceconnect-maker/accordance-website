@@ -14,7 +14,7 @@ export function Features() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="order-2 lg:order-1"
         >
-          <span className="text-orange-500 font-bold tracking-widest uppercase text-xs mb-6 block">
+          <span className="text-foreground font-bold tracking-widest uppercase text-xs mb-6 block">
             Innovation
           </span>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-[1.1]">

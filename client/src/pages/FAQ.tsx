@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { FAQSection } from "@/components/FAQSection";
+import { Footer } from "@/components/Footer";
 
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       
-      <main className="pt-32">
+      <main className="pt-32 pb-24">
         <div className="px-6 md:px-12 max-w-[1200px] mx-auto mb-12">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -28,6 +29,7 @@ export default function FAQ() {
             <FAQSection />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

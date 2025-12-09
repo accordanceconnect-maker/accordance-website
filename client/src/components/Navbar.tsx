@@ -52,7 +52,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/">
           <a className="text-xl font-bold tracking-tighter uppercase z-50 relative">
-            Nordic Estate
+            Accordance
           </a>
         </Link>
 
