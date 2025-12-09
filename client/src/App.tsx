@@ -3,12 +3,19 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
+import ServiceDetail from "@/pages/ServiceDetail";
+import Contact from "@/pages/Contact";
+import FAQ from "@/pages/FAQ";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/services" component={Home} /> {/* Reuse home for now or dedicated list */}
+      <Route path="/services/:id" component={ServiceDetail} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/faq" component={FAQ} />
       <Route component={NotFound} />
     </Switch>
   );

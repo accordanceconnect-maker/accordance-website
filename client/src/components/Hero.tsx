@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import heroBg from "@assets/generated_images/minimalist_electric_car_in_snowy_landscape.png";
+import heroBg from "@assets/generated_images/minimalist_brutalist_concrete_architecture.png";
 
 export function Hero() {
   return (
@@ -14,14 +14,11 @@ export function Hero() {
       >
         <img
           src={heroBg}
-          alt="Polestar Hero"
-          className="w-full h-full object-cover opacity-90"
+          alt="Nordic Estate Hero"
+          className="w-full h-full object-cover opacity-80"
         />
         {/* Gradient Overlay for Text Contrast */}
-        {/* Top gradient protects the white navbar */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/60 to-transparent" />
-        {/* Bottom gradient protects the white hero text */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
       </motion.div>
 
       {/* Content */}
@@ -30,25 +27,25 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="max-w-4xl"
         >
-          <span className="block text-sm md:text-base font-medium tracking-widest uppercase mb-4 text-white/90">
-            Polestar 3
+          <span className="block text-sm md:text-base font-medium tracking-widest uppercase mb-6 text-white/90 border-l-2 border-white pl-4">
+            Global Real Estate Advisory
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 text-balance drop-shadow-2xl">
-            The SUV for the electric age.
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95] mb-8 text-balance drop-shadow-xl">
+            Curating the exceptional.
           </h1>
           
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
-            <button className="group flex items-center gap-2 text-lg font-medium hover:text-gray-300 transition-colors">
-              Discover
-              <span className="bg-white/20 p-1 rounded-full group-hover:bg-white/30 transition-colors">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
+            <button className="group flex items-center gap-3 text-lg font-medium hover:text-gray-300 transition-colors">
+              Explore Portfolio
+              <span className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-colors">
                 <ChevronRight className="w-4 h-4" />
               </span>
             </button>
-            <button className="group flex items-center gap-2 text-lg font-medium hover:text-gray-300 transition-colors">
-              Configure
-              <span className="bg-white/20 p-1 rounded-full group-hover:bg-white/30 transition-colors">
+            <button className="group flex items-center gap-3 text-lg font-medium hover:text-gray-300 transition-colors">
+              Advisory Services
+              <span className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-colors">
                 <ChevronRight className="w-4 h-4" />
               </span>
             </button>

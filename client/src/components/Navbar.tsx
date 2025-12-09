@@ -1,20 +1,24 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Polestar 2", href: "#" },
-  { name: "Polestar 3", href: "#" },
-  { name: "Polestar 4", href: "#" },
-  { name: "Polestar 5", href: "#" },
-  { name: "02 Concept", href: "#" },
+  { name: "Services", href: "/services" },
+  { name: "Expertise", href: "/expertise" }, // Could be same as services or distinct
+  { name: "About", href: "/about" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+
+  // Always dark text on white pages if not at top, or if strictly defined pages
+  const isTransparentPage = location === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +28,22 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const textColorClass = (isTransparentPage && !isScrolled && !isMobileMenuOpen) 
+    ? "text-white" 
+    : "text-foreground";
+
+  const bgClass = (isScrolled || isMobileMenuOpen || !isTransparentPage) 
+    ? "bg-background/90 backdrop-blur-md" 
+    : "bg-transparent";
+
   return (
     <>
       <motion.nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out px-6 md:px-12 py-6 flex items-center justify-between",
-          isScrolled || isMobileMenuOpen ? "bg-background text-foreground" : "bg-transparent text-white"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out px-6 md:px-12 py-6 flex items-center justify-between border-b border-transparent",
+          bgClass,
+          textColorClass,
+          (isScrolled && !isMobileMenuOpen) && "border-border/50 py-4"
         )}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -37,28 +51,28 @@ export function Navbar() {
       >
         {/* Logo */}
         <Link href="/">
-          <a className="text-2xl font-bold tracking-tighter uppercase z-50 relative">
-            Polestar
+          <a className="text-xl font-bold tracking-tighter uppercase z-50 relative">
+            Nordic Estate
           </a>
         </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium hover:opacity-70 transition-opacity"
-            >
-              {link.name}
-            </a>
+            <Link key={link.name} href={link.href}>
+              <a className="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest text-[11px]">
+                {link.name}
+              </a>
+            </Link>
           ))}
           <div className="h-4 w-[1px] bg-current opacity-30 mx-2" />
-          <a href="#" className="text-sm font-medium hover:opacity-70 transition-opacity">
-            Log in
-          </a>
+          <Link href="/contact">
+            <a className="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest text-[11px]">
+              Inquire
+            </a>
+          </Link>
           <button className="ml-4 p-2 hover:bg-foreground/5 rounded-full transition-colors">
-            <Menu className="w-6 h-6" />
+            <Menu className="w-5 h-5" />
           </button>
         </div>
 
@@ -83,17 +97,18 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + i * 0.1 }}
-                  className="text-3xl font-bold tracking-tight flex items-center justify-between group"
-                >
-                  {link.name}
-                  <ChevronRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.a>
+                <Link key={link.name} href={link.href}>
+                  <motion.a
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + i * 0.1 }}
+                    className="text-3xl font-bold tracking-tight flex items-center justify-between group cursor-pointer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                    <ChevronRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </motion.a>
+                </Link>
               ))}
             </div>
             
@@ -103,9 +118,10 @@ export function Navbar() {
               transition={{ delay: 0.6 }}
               className="mt-auto mb-12 flex flex-col gap-4 border-t pt-8"
             >
-               <a href="#" className="text-lg font-medium">Log in</a>
-               <a href="#" className="text-lg font-medium text-muted-foreground">Support</a>
-               <a href="#" className="text-lg font-medium text-muted-foreground">United States</a>
+               <Link href="/contact"><a className="text-lg font-medium">Get in touch</a></Link>
+               <a href="#" className="text-lg font-medium text-muted-foreground">London</a>
+               <a href="#" className="text-lg font-medium text-muted-foreground">Stockholm</a>
+               <a href="#" className="text-lg font-medium text-muted-foreground">New York</a>
             </motion.div>
           </motion.div>
         )}
