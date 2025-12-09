@@ -1,0 +1,189 @@
+Build a full website in the visual and tonal style of Polestar. Follow these rules exactly:
+
+⸻
+
+1. GLOBAL DESIGN SYSTEM
+
+Color Palette
+	•	Background: #FFFFFF
+	•	Dark text: #0A0A0A
+	•	Mid text: #2B2B2B
+	•	Subtle grey lines: #E6E6E6
+	•	No accents, no color pops.
+
+Typography
+
+Use one typeface throughout: Space Grotesk or Inter
+	•	Headings: 22–48px, medium, tracking -1 to -2
+	•	Paragraphs: 16px, 150% line height
+	•	No bold anywhere
+	•	No italics
+	•	Left-aligned only
+	•	No uppercase headings
+
+Layout Rules
+	•	Maximum content width: 1080px, aligned left, with generous right-side whitespace
+	•	Section padding: 120px top / 120px bottom
+	•	Card padding: 48px
+	•	Vertical spacing between elements: 12px (micro), 48px (macro)
+	•	Borders: 1px solid #E6E6E6
+	•	Border radius: 0px
+	•	Shadows: none
+	•	Hover: opacity shift 100% → 80%
+
+Imagery Guidelines
+	•	Monochrome architecture
+	•	Clean lines, modern geometry
+	•	No color, no humans
+	•	High contrast, soft gradient skies
+	•	Minimalist and technical
+
+⸻
+
+2. PAGE STRUCTURE (OUTPUT EXACTLY IN THIS ORDER)
+
+⸻
+
+SECTION 1 — HERO
+
+Layout:
+	•	Large monochrome architectural background (full-width but masked to clean geometry).
+	•	Left-aligned headline + paragraph placed over a white block or lower part of image.
+
+Content:
+H1: Real Estate. Re-Imagined.
+Paragraph:
+At Accordance, we apply structured methods and distilled insight to optimise commercial and industrial real-estate decisions.
+
+CTA:
+Button → “Book a call”
+Style: minimal outline, black text, black border, 0 radius.
+
+⸻
+
+SECTION 2 — WHAT WE DO (SERVICES GRID)
+
+Section Heading:
+H2: What We Do
+Paragraph:
+We translate complex real-estate challenges into structured, actionable workstreams for institutional decision-making.
+
+Grid Layout:
+Four service cards → 2 columns × 2 rows (desktop), 1 column (mobile)
+Each card follows:
+	•	Title (22–24px)
+	•	Description (16px)
+	•	48px padding
+	•	Border: 1px solid #E6E6E6
+	•	No icons, no buttons
+
+SERVICE CARD CONTENT (USE EXACT COPY):
+
+1. Property Transaction Advisory
+
+We structure and negotiate commercial and industrial land transactions with clarity, precision, and disciplined execution.
+
+2. Developer & Brand Expansion Strategy
+
+We guide developers and institutional chains in identifying, screening, and securing expansion-ready sites through aligned planning and due-diligence frameworks.
+
+3. Valuation & Financial Assessment
+
+We deliver objective, data-grounded valuation work for land, built assets, and developments to inform acquisition, disposal, or financing decisions.
+
+4. Legal & Statutory Due Diligence
+
+We audit land titles, approvals, compliance status, and statutory exposure using a methodical framework that ensures regulatory certainty.
+
+⸻
+
+SECTION 3 — ABOUT ACCORDANCE
+
+H2: Built for Clarity
+Paragraph:
+Accordance is engineered as a precision-driven partner for commercial, industrial, and institutional real estate.
+Our work is structured, analytical, and documentation-led, enabling confident decisions in environments where accuracy matters.
+
+⸻
+
+SECTION 4 — CAPABILITIES SNAPSHOT
+
+Use a three-column list, clean and compact:
+
+Strategy
+
+Land identification, feasibility modelling, portfolio direction.
+
+Execution
+
+Title verification, documentation reviews, regulatory liaison, negotiation support.
+
+Intelligence
+
+Market assessments, valuation models, compliance mapping.
+
+Spacing: 32px between items, left-aligned.
+
+⸻
+
+SECTION 5 — CTA / CONTACT
+
+Minimal call to action, left-aligned:
+
+H2: Let’s Build With Clarity
+Paragraph:
+For mandates, partnerships, or structured advisory, reach out to our team.
+
+Button: Contact Us
+(Outline button, no fill)
+
+⸻
+
+SECTION 6 — FOOTER
+
+Ultra-clean, Polestar style:
+	•	Left-aligned
+	•	No borders
+	•	2-column layout
+	•	Items stacked vertically
+	•	12px spacing
+
+Column 1:
+Accordance
+Real-Estate Advisory for Commercial, Industrial & Institutional Clients
+
+Column 2:
+Links
+	•	Home
+	•	Services
+	•	About
+	•	Contact
+
+Bottom note:
+© Accordance India Projects. All rights reserved.
+
+⸻
+
+3. TONE & WRITING RULES
+	•	Understated.
+	•	Technical.
+	•	Calm confidence.
+	•	Zero hype.
+	•	No marketing speak.
+	•	No superlatives.
+	•	Every line must feel engineered, not written.
+
+⸻
+
+4. OUTPUT FORMAT
+	•	Generate the full website in clean sections
+	•	Respect spacing, grid, alignment
+	•	Use only monochrome aesthetics
+	•	No animations unless extremely subtle
+
+⸻
+
+⭐ FINAL INSTRUCTION
+
+Build the entire site EXACTLY as specified. Do not improvise.
+Follow Polestar’s visual discipline and Accordance’s functional seriousness.

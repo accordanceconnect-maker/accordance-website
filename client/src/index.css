@@ -8,13 +8,11 @@
   
   /* Monochrome Palette */
   --color-carbon: #0A0A0A;
-  --color-graphite: #1A1A1A;
-  --color-neutral-800: #2B2B2B;
-  --color-neutral-300: #E6E6E6;
-  --color-neutral-100: #F5F5F5;
+  --color-mid: #2B2B2B;
+  --color-border: #E6E6E6;
+  --color-background: #FFFFFF;
 
   /* Mappings */
-  --color-background: var(--color-neutral-100);
   --color-foreground: var(--color-carbon);
 
   --color-card: #FFFFFF;
@@ -26,20 +24,19 @@
   --color-primary: var(--color-carbon);
   --color-primary-foreground: #FFFFFF;
 
-  --color-secondary: var(--color-neutral-100);
+  --color-secondary: var(--color-background);
   --color-secondary-foreground: var(--color-carbon);
 
-  --color-muted: var(--color-neutral-100);
-  --color-muted-foreground: var(--color-neutral-800);
+  --color-muted: var(--color-background);
+  --color-muted-foreground: var(--color-mid);
 
-  --color-accent: var(--color-neutral-100);
+  --color-accent: var(--color-background);
   --color-accent-foreground: var(--color-carbon);
 
   --color-destructive: var(--color-carbon);
   --color-destructive-foreground: #FFFFFF;
 
-  --color-border: var(--color-neutral-300);
-  --color-input: var(--color-neutral-300);
+  --color-input: var(--color-border);
   --color-ring: var(--color-carbon);
 
   --radius-sm: 0px;
@@ -56,26 +53,16 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-white text-[#0A0A0A];
     text-align: left;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans tracking-tight font-medium;
-  }
-  h1 {
-    font-size: clamp(48px, 5vw, 64px);
-    letter-spacing: -0.04em; /* -1 to -2ish */
-    line-height: 1.1;
-  }
-  h2 {
-    font-size: clamp(32px, 4vw, 48px);
-    letter-spacing: -0.03em;
+    color: #0A0A0A;
   }
   p {
     @apply font-sans font-normal;
-    font-size: clamp(16px, 1.2vw, 18px);
-    line-height: 1.4;
-    color: var(--color-neutral-800);
+    color: #2B2B2B;
   }
   
   img {
@@ -84,26 +71,15 @@
 }
 
 @layer utilities {
-  .container-custom {
-    max-width: 1080px;
-    margin-inline: auto;
-    padding-inline: 32px;
-  }
-  @media (min-width: 768px) {
-    .container-custom {
-      padding-inline: 80px;
-    }
-  }
-
   .btn-polestar {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
-    height: 44px;
-    padding-inline: 24px;
+    justify-content: center;
+    height: 44px; /* Standard button height if not specified, usually Polestar uses minimal text links or outlined buttons */
+    padding-inline: 32px;
     background-color: transparent;
-    border: 1px solid var(--color-carbon);
-    color: var(--color-carbon);
+    border: 1px solid #0A0A0A;
+    color: #0A0A0A;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 16px;
     font-weight: 400; /* Regular */
@@ -114,6 +90,6 @@
   }
   
   .btn-polestar:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
