@@ -1,0 +1,121 @@
+Build a website that follows Polestar’s design language but adapted for a real-estate advisory firm.
+Follow these design rules exactly, without deviation:
+
+⸻
+
+1. Global Design System
+	•	Color Palette (Monochrome Only):
+	•	Carbon Black: #0A0A0A
+	•	Graphite: #1A1A1A
+	•	Neutral 800: #2B2B2B
+	•	Neutral 300: #E6E6E6
+	•	Neutral 100 (Background): #F5F5F5
+	•	No gradients, no color accents, no shadows.
+	•	Typography:
+	•	Primary Font: Space Grotesk (if unavailable: Inter or IBM Plex Sans)
+	•	Weights Allowed: Regular, Medium (no bold)
+	•	H1 Size: 48–64px, -1 to -2 letter spacing
+	•	Paragraph: 16–18px, 140% line height
+	•	All text must be left-aligned.
+	•	Spacing & Layout:
+	•	Content width max: 1080px
+	•	Horizontal padding: 80px desktop / 32px mobile
+	•	Vertical rhythm: sections separated by 120px
+	•	Everything snaps to a clean left alignment, wide negative space on the right.
+	•	Imagery:
+	•	Architectural, minimal, grayscale photographs.
+	•	Clean edges, no people, no clutter, no textures.
+	•	No saturation or color overlays.
+	•	UI Rules:
+	•	Straight edges only, 0px radius everywhere.
+	•	Button height: 44px, border: 1px black, text left-aligned inside button.
+	•	Hover: shift opacity from 100% → 70%.
+
+⸻
+
+2. Hero Section (Polestar Style)
+
+Structure:
+	•	Full-width monochrome architectural image (grayscale)
+	•	Text block positioned lower-left quadrant
+	•	No overlay unless required for readability: use rgba(255,255,255,0.75) only.
+
+Copy to use:
+	•	H1: “Real Estate. Re-Engineered.”
+	•	Paragraph:
+“We bring structure, clarity, and precision to commercial, industrial, and institutional real estate decisions.”
+	•	Button: “Book a Consultation →”
+
+Layout Constraints:
+	•	Content width: 560px
+	•	Text aligned left
+	•	Gap between H1 and paragraph: 12px
+	•	Button gap: 24px
+
+⸻
+
+3. About Section
+
+Structure:
+	•	Left column: text
+	•	Right column: single minimal architectural photograph
+	•	50/50 layout, left bias
+	•	Hard alignment grid
+
+Copy:
+H2: “Clarity in Every Square Foot.”
+Paragraph:
+“At Accordance India Projects, we translate complex land, statutory, and valuation challenges into structured, actionable decisions.”
+
+⸻
+
+4. Services Section (Polestar Style Cards)
+
+Rules:
+	•	Three vertical cards, equal width
+	•	No shadows, no radius
+	•	White background, thin gray border (#E6E6E6)
+	•	Large padding (48px)
+	•	Title size: 22–24px
+	•	Small paragraph under each
+
+Service Titles:
+	1.	Transaction Strategy & Land Advisory
+	2.	Statutory & Legal Due Diligence
+	3.	Valuation, Data & Dispute Resolution
+
+⸻
+
+5. Contact Section
+	•	Clean, minimal block
+	•	Single left-aligned column
+	•	No form clutter
+
+Copy:
+H2: “Let’s bring clarity to your next decision.”
+Button: “Start the conversation →”
+
+⸻
+
+6. Navigation
+	•	Left: Logo (plain text “Accordance”)
+	•	Right: Menu items (light gray)
+	•	Always left aligned, minimal spacing
+	•	Height: 72px, no background unless scrolled → then solid white #FFFFFF
+
+⸻
+
+7. Footer
+	•	1px top border
+	•	2 columns only
+	•	Very small text (12px)
+	•	Full monochrome
+
+⸻
+
+🎯 Tone & Content Rules
+	•	Voice must be engineering-grade clarity, not marketing fluff.
+	•	Avoid adjectives like “high-stakes,” “premium,” “robust,” etc.
+	•	Use short, declarative sentences.
+	•	Every block must feel intentional and quiet.
+	•	The site should feel extremely calm, technical, and structured.

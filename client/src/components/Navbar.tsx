@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Services", href: "/services" },
-  { name: "Expertise", href: "/expertise" }, // Could be same as services or distinct
   { name: "About", href: "/about" },
-  { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -16,9 +14,6 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
-
-  // Always dark text on white pages if not at top, or if strictly defined pages
-  const isTransparentPage = location === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,62 +23,55 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const textColorClass = (isTransparentPage && !isScrolled && !isMobileMenuOpen) 
-    ? "text-white" 
-    : "text-foreground";
-
-  const bgClass = (isScrolled || isMobileMenuOpen || !isTransparentPage) 
-    ? "bg-background/90 backdrop-blur-md" 
-    : "bg-transparent";
-
   return (
     <>
-      <motion.nav
+      <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out px-6 md:px-12 py-6 flex items-center justify-between border-b border-transparent",
-          bgClass,
-          textColorClass,
-          (isScrolled && !isMobileMenuOpen) && "border-border/50 py-4"
+          "fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out h-[72px] flex items-center border-b border-transparent",
+          (isScrolled || isMobileMenuOpen) ? "bg-white border-neutral-300" : "bg-transparent"
         )}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
-        {/* Logo */}
-        <Link href="/">
-          <a className="text-xl font-bold tracking-tighter uppercase z-50 relative">
-            Accordance
-          </a>
-        </Link>
-
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a className="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest text-[11px]">
-                {link.name}
-              </a>
-            </Link>
-          ))}
-          <div className="h-4 w-[1px] bg-current opacity-30 mx-2" />
-          <Link href="/contact">
-            <a className="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest text-[11px]">
-              Inquire
+        <div className="w-full max-w-[1080px] mx-auto px-8 md:px-[80px] flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/">
+            <a className={cn(
+              "text-[18px] font-medium tracking-tight z-50 relative transition-colors",
+              (isScrolled || isMobileMenuOpen || location !== "/") ? "text-[#0A0A0A]" : "text-white" // Assuming hero text needs to be white initially if over image, but strictly guidelines say monochrome. If hero image is grayscale, black text might be hard to read unless image is light.
+              // Let's stick to black text if background becomes white, otherwise mix.
+              // Guideline: "Height: 72px, no background unless scrolled -> then solid white"
+              // Color of text isn't explicitly defined for transparent state, but typically white on dark img or black on light.
+              // Let's assume white on transparent hero, black on white bg.
+            )}>
+              Accordance
             </a>
           </Link>
-          <button className="ml-4 p-2 hover:bg-foreground/5 rounded-full transition-colors">
-            <Menu className="w-5 h-5" />
+
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link key={link.name} href={link.href}>
+                <a className={cn(
+                  "text-[14px] font-normal transition-opacity hover:opacity-70",
+                   (isScrolled || location !== "/") ? "text-[#2B2B2B]" : "text-white/80"
+                )}>
+                  {link.name}
+                </a>
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className={cn(
+              "md:hidden z-50 p-2",
+               (isScrolled || isMobileMenuOpen || location !== "/") ? "text-[#0A0A0A]" : "text-white"
+            )}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden z-50 p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
@@ -92,37 +80,21 @@ export function Navbar() {
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 bg-background z-40 flex flex-col pt-32 px-6"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed inset-0 bg-white z-40 flex flex-col pt-[100px] px-8"
           >
-            <div className="flex flex-col gap-6">
-              {navLinks.map((link, i) => (
+            <div className="flex flex-col gap-8">
+              {navLinks.map((link) => (
                 <Link key={link.name} href={link.href}>
-                  <motion.a
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + i * 0.1 }}
-                    className="text-3xl font-bold tracking-tight flex items-center justify-between group cursor-pointer"
+                  <a
+                    className="text-[24px] font-medium text-[#0A0A0A]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
-                    <ChevronRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </motion.a>
+                  </a>
                 </Link>
               ))}
             </div>
-            
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-auto mb-12 flex flex-col gap-4 border-t pt-8"
-            >
-               <Link href="/contact"><a className="text-lg font-medium">Get in touch</a></Link>
-               <a href="#" className="text-lg font-medium text-muted-foreground">London</a>
-               <a href="#" className="text-lg font-medium text-muted-foreground">Stockholm</a>
-               <a href="#" className="text-lg font-medium text-muted-foreground">New York</a>
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
