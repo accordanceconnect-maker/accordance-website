@@ -5,26 +5,26 @@ import { ArrowRight } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-neutral-200 selection:text-black">
+    <div className="min-h-screen bg-[#F5F5F5] text-[#0A0A0A] font-sans selection:bg-[#E6E6E6] selection:text-[#0A0A0A]">
       <Navbar />
       
-      <main className="pt-32 pb-24 px-6 md:px-12">
-        <div className="max-w-[1200px] mx-auto">
+      <main className="pt-[120px] pb-[120px]">
+        <div className="max-w-[1080px] mx-auto px-8 md:px-[80px]">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-16 md:mb-24"
+            className="mb-[120px]"
           >
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-              Start the<br />conversation.
+            <h1 className="text-[#0A0A0A] mb-8">
+              Start the conversation.
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
+            <p className="text-[#2B2B2B] text-[18px] max-w-[600px]">
               Whether you are looking to acquire a trophy asset or optimize an existing portfolio, our team is ready to provide bespoke guidance.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             
             {/* Form */}
             <motion.div
@@ -39,9 +39,9 @@ export default function Contact() {
                       type="text" 
                       id="name"
                       placeholder="Name" 
-                      className="peer w-full bg-transparent border-b border-border py-4 text-xl focus:outline-none focus:border-foreground transition-colors placeholder:text-transparent"
+                      className="peer w-full bg-transparent border-b border-[#E6E6E6] py-4 text-[18px] focus:outline-none focus:border-[#0A0A0A] transition-colors placeholder:text-transparent text-[#0A0A0A]"
                     />
-                    <label htmlFor="name" className="absolute left-0 top-4 text-xl text-muted-foreground transition-all peer-focus:-top-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest cursor-text">
+                    <label htmlFor="name" className="absolute left-0 top-4 text-[18px] text-[#2B2B2B] transition-all peer-focus:-top-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest cursor-text font-medium">
                       Name
                     </label>
                   </div>
@@ -51,9 +51,9 @@ export default function Contact() {
                       type="email" 
                       id="email"
                       placeholder="Email" 
-                      className="peer w-full bg-transparent border-b border-border py-4 text-xl focus:outline-none focus:border-foreground transition-colors placeholder:text-transparent"
+                      className="peer w-full bg-transparent border-b border-[#E6E6E6] py-4 text-[18px] focus:outline-none focus:border-[#0A0A0A] transition-colors placeholder:text-transparent text-[#0A0A0A]"
                     />
-                    <label htmlFor="email" className="absolute left-0 top-4 text-xl text-muted-foreground transition-all peer-focus:-top-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest cursor-text">
+                    <label htmlFor="email" className="absolute left-0 top-4 text-[18px] text-[#2B2B2B] transition-all peer-focus:-top-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest cursor-text font-medium">
                       Email Address
                     </label>
                   </div>
@@ -61,15 +61,15 @@ export default function Contact() {
                   <div className="group relative">
                     <select 
                       id="interest"
-                      className="peer w-full bg-transparent border-b border-border py-4 text-xl focus:outline-none focus:border-foreground transition-colors appearance-none rounded-none"
+                      className="peer w-full bg-transparent border-b border-[#E6E6E6] py-4 text-[18px] focus:outline-none focus:border-[#0A0A0A] transition-colors appearance-none rounded-none text-[#0A0A0A]"
                     >
                       <option value="" disabled selected>Select Interest</option>
-                      <option value="advisory">Investment Advisory</option>
-                      <option value="management">Asset Management</option>
-                      <option value="development">Development</option>
+                      <option value="advisory">Transaction Strategy</option>
+                      <option value="legal">Statutory & Legal</option>
+                      <option value="valuation">Valuation & Data</option>
                       <option value="other">Other Inquiry</option>
                     </select>
-                    <label htmlFor="interest" className="absolute left-0 -top-6 text-xs uppercase tracking-widest text-muted-foreground">
+                    <label htmlFor="interest" className="absolute left-0 -top-6 text-xs uppercase tracking-widest text-[#2B2B2B] font-medium">
                       Area of Interest
                     </label>
                   </div>
@@ -79,16 +79,16 @@ export default function Contact() {
                       id="message"
                       placeholder="Message" 
                       rows={4}
-                      className="peer w-full bg-transparent border-b border-border py-4 text-xl focus:outline-none focus:border-foreground transition-colors placeholder:text-transparent resize-none"
+                      className="peer w-full bg-transparent border-b border-[#E6E6E6] py-4 text-[18px] focus:outline-none focus:border-[#0A0A0A] transition-colors placeholder:text-transparent resize-none text-[#0A0A0A]"
                     ></textarea>
-                     <label htmlFor="message" className="absolute left-0 top-4 text-xl text-muted-foreground transition-all peer-focus:-top-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest cursor-text">
+                     <label htmlFor="message" className="absolute left-0 top-4 text-[18px] text-[#2B2B2B] transition-all peer-focus:-top-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest cursor-text font-medium">
                       Message
                     </label>
                   </div>
                 </div>
 
-                <button type="submit" className="group flex items-center gap-4 text-xl font-bold uppercase tracking-widest hover:opacity-60 transition-opacity">
-                  Send Inquiry <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                <button type="submit" className="btn-polestar w-full justify-center">
+                  Send Inquiry &rarr;
                 </button>
               </form>
             </motion.div>
@@ -101,20 +101,20 @@ export default function Contact() {
                className="space-y-16"
             >
               <div>
-                <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-muted-foreground">Headquarters</h3>
-                <p className="text-2xl font-medium mb-2">Stockholm</p>
-                <p className="text-lg text-muted-foreground">Normalm 42<br/>111 47 Stockholm<br/>Sweden</p>
-                <a href="mailto:sth@accordance.com" className="inline-block mt-4 text-lg underline decoration-1 underline-offset-4 hover:no-underline">sth@accordance.com</a>
+                <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-[#2B2B2B]">Headquarters</h3>
+                <p className="text-[24px] font-medium mb-2 text-[#0A0A0A]">New Delhi</p>
+                <p className="text-[16px] text-[#2B2B2B]">Connaught Place<br/>New Delhi, 110001<br/>India</p>
+                <a href="mailto:info@accordance.in" className="inline-block mt-4 text-[16px] underline decoration-1 underline-offset-4 hover:no-underline text-[#0A0A0A]">info@accordance.in</a>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-muted-foreground">London</h3>
-                  <p className="text-lg text-muted-foreground">Mayfair Place 12<br/>W1J 8AJ London<br/>United Kingdom</p>
+                  <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-[#2B2B2B]">Mumbai</h3>
+                  <p className="text-[16px] text-[#2B2B2B]">BKC, Bandra East<br/>Mumbai, 400051<br/>India</p>
                 </div>
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-muted-foreground">New York</h3>
-                  <p className="text-lg text-muted-foreground">432 Park Avenue<br/>New York, NY 10022<br/>United States</p>
+                  <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-[#2B2B2B]">Bangalore</h3>
+                  <p className="text-[16px] text-[#2B2B2B]">Whitefield<br/>Bangalore, 560066<br/>India</p>
                 </div>
               </div>
             </motion.div>

@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import ServiceDetail from "@/pages/ServiceDetail";
 import Contact from "@/pages/Contact";
 import FAQ from "@/pages/FAQ";
+import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/services" component={Home} /> {/* Reuse home for now or dedicated list */}
       <Route path="/services/:id" component={ServiceDetail} />
+      <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/faq" component={FAQ} />
       <Route component={NotFound} />
