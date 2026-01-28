@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import detailImg from "@assets/generated_images/electric_car_charging_port_detail.png";
+import detailImg from "@assets/electric_car_charging_port_detail.png";
 
 export function Features() {
   return (

@@ -30,7 +30,8 @@ export function ServicesGrid() {
           transition={{ duration: 0.6 }}
           className="mb-[48px] max-w-[600px]"
         >
-          <h2 className="text-[#0A0A0A] mb-[12px] text-[32px] md:text-[48px] leading-tight tracking-[-0.03em] font-medium">
+          <span className="section-label">Services</span>
+          <h2 className="text-[#0A0A0A] mb-[12px] text-[32px] md:text-[48px] leading-tight tracking-[-0.03em]">
             What We Do
           </h2>
           <p className="text-[#2B2B2B] text-[16px] leading-[1.5]">
@@ -54,6 +55,13 @@ export function ServicesGrid() {
               <p className="text-[#2B2B2B] text-[16px] leading-[1.5]">
                 {service.description}
               </p>
+              <a
+                href="/services"
+                className="chevron-cta mt-[16px]"
+                aria-label={`View details for ${service.title}`}
+              >
+                View service
+              </a>
             </motion.div>
           ))}
         </div>

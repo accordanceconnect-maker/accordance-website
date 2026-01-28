@@ -1,38 +1,132 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AboutSection } from "@/components/AboutSection";
 import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#F5F5F5] text-[#0A0A0A] font-sans selection:bg-[#E6E6E6] selection:text-[#0A0A0A]">
-      <Navbar />
-      
-      <main className="pt-[120px] pb-[120px]">
-        <div className="max-w-[1080px] mx-auto px-8 md:px-[80px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-[800px] mb-[120px]"
-          >
-             <h1 className="text-[#0A0A0A] mb-8">
-              About Accordance.
-            </h1>
-            <p className="text-[#2B2B2B] text-[18px] leading-relaxed mb-8">
-              We are a specialized real estate advisory firm dedicated to bringing engineering-grade precision to the property market. Our team consists of architects, data scientists, and financial analysts who believe that clarity is the ultimate asset.
-            </p>
-            <p className="text-[#2B2B2B] text-[18px] leading-relaxed">
-              Founded on the principles of transparency and rigor, we serve a global clientele of institutional investors, developers, and family offices who demand more than just market sentiment.
-            </p>
-          </motion.div>
-        </div>
+    <>
+      <div className="about-page">
+        <main className="page-content">
 
-        {/* Reuse the About Section component for the visual/statement part */}
-        <AboutSection />
-      </main>
-      
-      <Footer />
-    </div>
+          {/* INTRO */}
+          <section className="section-standard">
+            <div className="container-polestar stack-32">
+
+              <span className="label">About</span>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Clarity precedes commitment.
+              </motion.h2>
+
+              {/* Width-controlled intro copy */}
+              <div className="about-intro-copy stack-24">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Accordance India Projects is a mandate–based real estate advisory
+                  working across commercial, industrial, institutional, and
+                  warehousing assets in India. Our work sits at the intersection
+                  of capital, land, regulation and disciplined execution.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  We operate as an advisory partner where clarity, statutory
+                  certainty and transaction structure determine outcomes. Our
+                  role is to reduce uncertainty before capital, reputation or
+                  time is committed.
+                </motion.p>
+              </div>
+
+            </div>
+          </section>
+
+          {/* WAY OF WORKING — LEDGER */}
+          <section className="section-standard">
+            <div className="container-polestar stack-32">
+
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Our way of working
+              </motion.h2>
+
+              <ol className="about-ledger">
+                <li>Every decision balances regulation, capital and long-term operating fit.</li>
+                <li>Mandate discipline provides structure before negotiation begins.</li>
+                <li>Statutory clarity and documentation reduce execution risk.</li>
+                <li>Real estate decisions are engineered, not improvised.</li>
+              </ol>
+
+            </div>
+          </section>
+
+          {/* PRINCIPLES — LEDGER */}
+          <section className="section-standard">
+            <div className="container-polestar stack-32">
+
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Principles that anchor our work
+              </motion.h2>
+
+              <ol className="about-principles-ledger">
+                <li><span>Long-term alignment over short-term optimisation.</span></li>
+                <li><span>Mandate discipline guides execution.</span></li>
+                <li><span>Statutory clarity before negotiation.</span></li>
+                <li><span>Documentation over assumption.</span></li>
+                <li><span>Precision over promotion.</span></li>
+              </ol>
+
+            </div>
+          </section>
+
+          {/* WHO WE WORK WITH */}
+          <section className="section-standard">
+            <div className="container-polestar stack-32">
+
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Who we work with
+              </motion.h2>
+
+              <div className="who-we-work-with-grid">
+                <div className="who-column">
+                  <div className="who-item">Retail &amp; Consumer Businesses</div>
+                  <div className="who-item">Industrial &amp; Manufacturing</div>
+                  <div className="who-item">Institutional Buyers</div>
+                </div>
+
+                <div className="who-column">
+                  <div className="who-item">Private Investors</div>
+                  <div className="who-item">Developers</div>
+                  <div className="who-item">Corporates</div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </main>
+
+        <Footer />
+      </div>
+    </>
   );
 }

@@ -1,37 +1,116 @@
-import { Link } from "wouter";
-
 export function Footer() {
   return (
-    <footer className="bg-white pt-[60px] pb-[60px] border-t border-[#E6E6E6] text-left">
-      <div className="max-w-[1080px] mx-auto px-8 md:px-[80px] grid grid-cols-1 md:grid-cols-2 gap-[48px]">
-        
-        {/* Column 1: Branding */}
-        <div className="flex flex-col gap-[12px]">
-           <div className="text-[16px] text-[#0A0A0A] font-medium">
-             Accordance
-           </div>
-           <p className="text-[16px] text-[#2B2B2B] max-w-[300px]">
-             Real-Estate Advisory for Commercial, Industrial & Institutional Clients
-           </p>
+    <footer
+      className="footer"
+      aria-labelledby="footer-heading"
+      role="contentinfo"
+    >
+      <div className="container-polestar">
+        <div className="footer-grid">
+
+          {/* BRAND / POSITIONING */}
+          <div className="footer-col brand">
+            <h2 id="footer-heading" className="footer-brand">
+              Accordance India Projects
+            </h2>
+
+            <p>
+              Mandate-based real estate advisory supporting structured <br />
+              decision-making across land, assets and capital allocation.
+            </p>
+
+            <div className="footer-contact">
+              <a
+                className="footer-link footer-email"
+                href="mailto:connect@accordanceindia.com"
+              >
+                connect@accordanceindia.com
+              </a>
+            </div>
+
+            <div className="footer-contact-spacer" />
+          </div>
+
+          {/* SOCIALS */}
+          <div className="footer-col socials">
+            <h3
+              className="footer-heading"
+              id="footer-social-heading"
+            >
+              Socials
+            </h3>
+
+            <nav
+              className="footer-nav"
+              aria-labelledby="footer-social-heading"
+            >
+              <div className="footer-links">
+                <a
+                  className="footer-link"
+                  href="https://www.instagram.com/accordanceindia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+
+                <a
+                  className="footer-link"
+                  href="https://www.linkedin.com/company/accordanceindia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          {/* NAVIGATION */}
+          <div className="footer-col navigate">
+            <h3
+              className="footer-heading"
+              id="footer-nav-heading"
+            >
+              Navigate
+            </h3>
+
+            <nav
+              className="footer-nav"
+              aria-labelledby="footer-nav-heading"
+            >
+              <div className="footer-links">
+                <a className="footer-link" href="/">Home</a>
+                <a className="footer-link" href="/services">Advisory</a>
+                <a className="footer-link" href="/about">About</a>
+                <a className="footer-link" href="/insights">Insights</a>
+                <a className="footer-link" href="/contact">Engage</a>
+              </div>
+            </nav>
+          </div>
+
         </div>
 
-        {/* Column 2: Links */}
-        <div className="flex flex-col gap-[12px]">
-           <div className="text-[16px] text-[#0A0A0A] font-medium mb-2">
-             Links
-           </div>
-           <Link href="/"><a className="text-[16px] text-[#2B2B2B] hover:opacity-70 transition-opacity">Home</a></Link>
-           <Link href="/services"><a className="text-[16px] text-[#2B2B2B] hover:opacity-70 transition-opacity">Services</a></Link>
-           <Link href="/about"><a className="text-[16px] text-[#2B2B2B] hover:opacity-70 transition-opacity">About</a></Link>
-           <Link href="/contact"><a className="text-[16px] text-[#2B2B2B] hover:opacity-70 transition-opacity">Contact</a></Link>
+        <div className="footer-separator" />
+
+        {/* BOTTOM BAR */}
+        <div className="footer-bottom">
+          <div className="footer-copy footer-copy-spaced">
+            © 2025 Accordance India Projects. All rights reserved.
+          </div>
+
+          <nav
+            className="footer-legal"
+            aria-label="Legal"
+          >
+            {/* WORKING PRIVACY LINK */}
+            <a href="/privacy-policy">Privacy Policy</a>
+
+            {/* Reserved for legal page */}
+            
+          </nav>
         </div>
 
-      </div>
-      
-      <div className="max-w-[1080px] mx-auto px-8 md:px-[80px] mt-[60px]">
-         <p className="text-[12px] text-[#2B2B2B]">
-           © Accordance India Projects. All rights reserved.
-         </p>
       </div>
     </footer>
   );

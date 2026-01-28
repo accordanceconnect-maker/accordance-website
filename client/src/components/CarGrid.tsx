@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import carSide from "@assets/generated_images/side_profile_of_performance_electric_car.png";
-import carInterior from "@assets/generated_images/minimalist_car_interior_dashboard.png";
+import carSide from "@assets/side_profile_of_performance_electric_car.png";
+import carInterior from "@assets/minimalist_car_interior_dashboard.png";
 
 const cars = [
   {

@@ -1,23 +1,58 @@
-import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { ServicesGrid } from "@/components/ServicesGrid";
-import { AboutSection } from "@/components/AboutSection";
+import { ServicesOverview } from "@/components/ServicesOverview";
+import Philosophy from "@/components/Philosophy";
 import { CapabilitiesSnapshot } from "@/components/CapabilitiesSnapshot";
+import { InsightsGateway } from "@/components/InsightsGateway";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white selection:bg-[#E6E6E6] selection:text-[#0A0A0A]">
-      <Navbar />
-      <main>
+    <>
+      <main id="main-content" className="page-content">
+
+        {/* HERO — full bleed, snapped to spine offset */}
         <Hero />
-        <ServicesGrid />
-        <AboutSection />
-        <CapabilitiesSnapshot />
-        <ContactSection />
+
+        {/* SERVICES OVERVIEW */}
+        <section className="section-standard">
+          <div className="container-polestar">
+            <ServicesOverview />
+          </div>
+        </section>
+
+        {/* PHILOSOPHY */}
+        <section className="section-standard">
+          <div className="container-polestar">
+            <Philosophy />
+          </div>
+        </section>
+
+        {/* CAPABILITIES SNAPSHOT */}
+        <section className="section-standard">
+          <div className="container-polestar">
+            <CapabilitiesSnapshot />
+          </div>
+        </section>
+
+        {/* INSIGHTS GATEWAY */}
+        <section className="section-standard">
+          <div className="container-polestar">
+            <InsightsGateway />
+          </div>
+        </section>
+
+        {/* CONTACT CTA */}
+        <section className="section-standard">
+          <div className="container-polestar">
+            <ContactSection />
+          </div>
+        </section>
+
       </main>
+
+      {/* FOOTER */}
       <Footer />
-    </div>
+    </>
   );
 }

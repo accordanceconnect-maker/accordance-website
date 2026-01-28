@@ -1,95 +1,1417 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+/* =========================================================
+   FONT FACE — GRIFT SANS (LOCAL, AUTHORITATIVE)
+   ========================================================= */
 
-@custom-variant dark (&:is(.dark *));
+/* =========================================================
+   🔒 LAYOUT SPINE — DO NOT TOUCH
+   Controls global rhythm, grid, typography scale & CTA system
+   Any spacing bugs MUST be solved here, not per-page.
+   ========================================================= */
 
-@theme inline {
-  --font-sans: 'Space Grotesk', sans-serif;
+   @font-face {
+    font-family: "Grift Sans";
+    src: url("/fonts/GriftSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
   
-  /* Monochrome Palette */
-  --color-carbon: #0A0A0A;
-  --color-mid: #2B2B2B;
-  --color-border: #E6E6E6;
-  --color-background: #FFFFFF;
-
-  /* Mappings */
-  --color-foreground: var(--color-carbon);
-
-  --color-card: #FFFFFF;
-  --color-card-foreground: var(--color-carbon);
-
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: var(--color-carbon);
-
-  --color-primary: var(--color-carbon);
-  --color-primary-foreground: #FFFFFF;
-
-  --color-secondary: var(--color-background);
-  --color-secondary-foreground: var(--color-carbon);
-
-  --color-muted: var(--color-background);
-  --color-muted-foreground: var(--color-mid);
-
-  --color-accent: var(--color-background);
-  --color-accent-foreground: var(--color-carbon);
-
-  --color-destructive: var(--color-carbon);
-  --color-destructive-foreground: #FFFFFF;
-
-  --color-input: var(--color-border);
-  --color-ring: var(--color-carbon);
-
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
+  @font-face {
+    font-family: "Grift Sans";
+    src: url("/fonts/GriftSans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
   
-  --spacing-container: 80px; /* desktop padding */
-  --spacing-section: 120px; /* vertical rhythm */
+  @font-face {
+    font-family: "Grift Sans";
+    src: url("/fonts/GriftSans-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+/* =========================================================
+   ACCORDANCE BASE SYSTEM — FINAL LOCK (PHASE 19)
+   ========================================================= */
+
+/* ---------- TOKENS ---------- */
+:root {
+  --s-8: 8px;
+  --s-16: 16px;
+  --s-24: 24px;
+  --s-32: 32px;
+  --s-48: 48px;
+  --s-64: 64px;
+  --s-96: 96px;
+  --s-128: 128px;
+
+  --c-bg: #fafafa;
+  --c-bg-alt: #f6f6f6;
+  --c-text: #161616;
+  --c-muted: #333;
+  --c-border: #e6e6e6;
+  --c-accent: #55624F;
+
+  --font-h1: 48px;
+  --font-h2: 32px;
+  --font-h3: 24px;
+  --font-body: 16px;
+  --font-small: 14px;
+
+  --lh-tight: 1.1;
+  --lh-body: 1.5;
+
+  --navbar-h: 48px;
 }
 
-@layer base {
-  * {
-    @apply border-border;
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+
+  font-family: "Grift Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--c-bg);
+  color: var(--c-text);
+  line-height: var(--lh-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   CONTAINER — SINGLE AUTHORITY
+   ========================================================= */
+
+/* PRIMARY GRID CONTAINER — DO NOT OVERRIDE PER PAGE */
+.container-polestar {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 6vw, 80px);
+}
+
+@media (max-width: 900px) {
+  .container-polestar { padding-inline: 40px; }
+}
+
+@media (max-width: 600px) {
+  .container-polestar { padding-inline: 20px; }
+}
+
+/* OPTIONAL READING WIDTH — USE EXPLICITLY */
+.reading-column {
+  max-width: 760px;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+
+h1 {
+  font-size: var(--font-h1);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--s-32);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h2 {
+  font-size: var(--font-h2);
+  font-weight: 350;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--s-32);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: var(--c-accent);
+  margin-top: var(--s-12);
+}
+
+h3 {
+  font-size: var(--font-h3);
+  font-weight: 350;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-size: var(--font-body);
+  color: var(--c-muted);
+  margin-top: var(--s-16);
+}
+
+/* =========================================================
+   LABEL — GLOBAL, AUTHORITATIVE
+   ========================================================= */
+
+.label {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+
+  margin-top: var(--s-16);   /* tighter pull from divider */
+  margin-bottom: var(--s-24); /* deliberate pause before heading */
+}
+
+/* =========================================================
+   STACK UTILITIES
+   ========================================================= */
+
+.stack-16 { display: flex; flex-direction: column; gap: var(--s-16); }
+.stack-32 { display: flex; flex-direction: column; gap: var(--s-32); }
+.stack-48 { display: flex; flex-direction: column; gap: var(--s-48); }
+.stack-64 { display: flex; flex-direction: column; gap: var(--s-64); }
+
+.stack-16 > *,
+.stack-32 > *,
+.stack-48 > *,
+.stack-64 > * {
+  margin: 0;
+}
+
+
+/* =========================================================
+   NAVBAR — LOCKED (SPINE COMPLIANT)
+   ========================================================= */
+
+   .navbar {
+    position: sticky;
+    top: 0;
+    height: var(--navbar-h);
+    background: var(--c-bg);
+    border-bottom: 1px solid var(--c-border);
+    z-index: 100;
+    font-size: 14px;
   }
-  body {
-    @apply font-sans antialiased bg-white text-[#0A0A0A];
+  
+  /* NAVBAR OFFSET — SINGLE SOURCE */
+  .page-content {
+    padding-top: 0;
+  }
+  
+  /* Inner grid mirrors container-polestar */
+  .navbar-inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: clamp(20px, 6vw, 80px);
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--s-32);
+  }
+  
+  .nav-links a {
+    white-space: nowrap;
+  }
+
+/* =========================================================
+   NAVBAR TYPOGRAPHY — FINAL, AUTHORITATIVE
+   ========================================================= */
+
+.navbar {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* BRAND — PRIMARY ANCHOR */
+.navbar .brand,
+.navbar .logo,
+.navbar-inner > .brand,
+.navbar-inner > a:first-child {
+  font-size: 20px;
+  font-weight: 350;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+/* NAV LINKS — SECONDARY */
+.nav-links a {
+  font-size: 14px;
+  font-weight: 350;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   NAVBAR — MOBILE VISIBILITY CONTROL (SPINE SAFE)
+   ========================================================= */
+
+/* Default: desktop layout */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 900px) {
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Mobile menu panel */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid var(--c-border);
+    background: var(--c-bg);
+
+    padding: var(--s-24) clamp(20px, 6vw, 80px);
+    gap: var(--s-16);
+  }
+
+}
+
+/* =========================================================
+   HERO — SPINE COMPLIANT
+   ========================================================= */
+
+   .hero-section {
+    position: relative;
+    min-height: 700px;
+    overflow: hidden;
+  }
+  
+  /* Background media layer */
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+    opacity: 0.85;
+    pointer-events: none;
+  }
+  
+  /* Content layer — follows spine */
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    min-height: calc(75vh - var(--navbar-h));
+  }
+
+/* Ensure hero headings respect the controlled reading column */
+
+/* =========================================================
+   SECTION RHYTHM + DIVIDERS — SINGLE CADENCE (LOCKED)
+   ========================================================= */
+
+/*
+  Core principle:
+  - ONE vertical rhythm
+  - Variants EXTEND, never redefine
+  - Dividers mark section boundaries, not padding interiors
+*/
+
+/*
+  SECTION LAYOUT CONTRACT (FOUNDATIONAL)
+
+  - Typography defines appearance, not spacing
+  - .section-stack owns internal vertical rhythm
+  - Sections own padding + background only
+  - Dividers separate sections, not content
+
+  NOTE:
+  Global enforcement is intentionally deferred.
+  Pages must opt‑in section by section.
+*/
+
+/* GLOBAL SECTION RHYTHM — DO NOT OVERRIDE */
+.section-standard {
+  padding-top: var(--s-64);
+  padding-bottom: var(--s-64);
+}
+
+/* ---------- DIVIDER AS TRUE BOUNDARY ---------- */
+.section-divider {
+}
+
+
+.section-standard {
+  display: block;
+  position: relative;
+}
+
+/* GLOBAL SECTION DIVIDER — SPINE SAFE */
+.section-standard {
+  padding-top: var(--s-64);
+  padding-bottom: var(--s-64);
+  border-bottom: 1px solid var(--c-border);
+}
+
+/* Remove divider from last section before footer */
+.section-standard:last-of-type {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   SECTION DIVIDER — STRUCTURAL (OPT‑IN)
+   ========================================================= */
+
+/*
+  Use this when divider is rendered as a real element
+  between sections instead of a pseudo‑element.
+*/
+
+.section-divider.structural {
+  width: 100%;
+  height: 1px;
+  background: var(--c-border);
+  margin-block: 0;
+}
+
+/* ---------- SERVICES PAGE OVERRIDE ---------- */
+/* Services page owns its own ledger separators */
+.services-page .section-divider::after {
+  display: none;
+}
+/* =========================================================
+   🔒 HOME LISTING GRIDS — GLOBAL CONTRACT (CORRECTED)
+   ========================================================= */
+
+.services-grid,
+.capabilities-grid,
+.case-insights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--s-32);
+}
+   
+@media (min-width: 900px) {
+  .services-grid,
+  .capabilities-grid,
+  .case-insights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: var(--s-48);     /* vertical stays subordinate */
+    column-gap: var(--s-64); /* horizontal breath */
+  }
+}
+
+.services-grid > *,
+.capabilities-grid > *,
+.case-insights-grid > * {
+  min-width: 0;
+}
+
+/* =========================================================
+   PHILOSOPHY — CONTENT ONLY (FINAL)
+   ========================================================= */
+
+.philosophy {
+  /* no padding, no background — content only */
+}
+
+.philosophy-content {
+  max-width: var(--reading-width, 760px);
+}
+
+.philosophy-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-24);
+}
+
+/* =========================================================
+   CTA SYSTEM
+   ========================================================= */
+
+.cta,
+.cta-primary,
+.chevron-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-8);
+  font-size: var(--font-small);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.cta::after,
+.cta-primary::after,
+.chevron-cta::after {
+  content: "→";
+  color: currentColor;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.cta:hover::after,
+.cta-primary:hover::after,
+.chevron-cta:hover::after {
+  transform: translateX(4px);
+  color: var(--c-accent);
+}
+
+/* =========================================================
+   ABOUT PAGE — LEDGER + STATEMENT SYSTEM (SPINE SAFE)
+   ========================================================= */
+
+/* Intro copy width control */
+.about-intro-copy {
+  max-width: 760px;
+}
+
+/* =========================================================
+   LEDGER SYSTEM — NUMBERED STRUCTURE
+   ========================================================= */
+
+.about-ledger,
+.about-principles-ledger {
+  counter-reset: about-counter;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-32); /* spine rhythm */
+}
+
+/* Each row */
+.about-ledger li,
+.about-principles-ledger li {
+  counter-increment: about-counter;
+
+  display: grid;
+  grid-template-columns: 64px 1fr; /* stronger number column */
+  gap: var(--s-24);
+  align-items: flex-start;
+
+  position: relative;
+}
+
+/* Number styling — authoritative */
+.about-ledger li::before,
+.about-principles-ledger li::before {
+  content: counter(about-counter, decimal-leading-zero);
+
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c-accent);
+
+  line-height: 1;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+
+  margin-top: 4px;
+}
+
+/* Vertical spine rail */
+.about-ledger li::after,
+.about-principles-ledger li::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 28px;
+  bottom: -16px;
+
+  width: 1px;
+  background: var(--c-border);
+}
+
+/* Kill rail on last item */
+.about-ledger li:last-child::after,
+.about-principles-ledger li:last-child::after {
+  display: none;
+}
+
+/* Body copy */
+.about-ledger li {
+  font-size: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--c-muted);
+}
+
+/* Principles emphasis */
+.about-principles-ledger li span {
+  font-weight: 400;
+  color: var(--c-text);
+}
+
+/* Micro interaction (spine safe) */
+.about-ledger li,
+.about-principles-ledger li {
+  transition: transform 0.2s ease;
+}
+
+.about-ledger li:hover,
+.about-principles-ledger li:hover {
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   WHO WE WORK WITH — GRID
+   ========================================================= */
+
+.who-we-work-with-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--s-64);
+  row-gap: var(--s-24);
+}
+
+@media (max-width: 700px) {
+  .who-we-work-with-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Who items */
+.who-item {
+  font-size: var(--font-body);
+  color: var(--c-muted);
+}
+
+/* =========================================================
+   CONTACT FORM — STABLE
+   ========================================================= */
+
+.section-contact {
+  padding-block: var(--s-48);
+}
+
+.section-contact form {
+  max-width: 640px;
+}
+
+.section-contact .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-8);
+}
+
+.section-contact input,
+.section-contact textarea,
+.section-contact select {
+  font-family: inherit;
+  font-size: 16px;
+  padding: var(--s-12) 0;
+  border: none;
+  border-bottom: 1px solid var(--c-border);
+  background: transparent;
+}
+
+.section-contact input:focus,
+.section-contact textarea:focus,
+.section-contact select:focus {
+  outline: none;
+  border-bottom-color: var(--c-text);
+}
+
+/* =========================================================
+   FOOTER — LOCKED
+   ========================================================= */
+
+.footer {
+  background: var(--c-bg-alt);
+  padding-top: var(--s-48);
+  padding-bottom: var(--s-24);
+}
+
+/* ===== FOOTER GRID — 3-COLUMN STRUCTURE ===== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  column-gap: var(--s-64);
+}
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* Footer columns */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left column — Brand */
+.footer-col.brand {
+  justify-self: start;
+}
+
+/* Center column — Navigation */
+.footer-col.navigate {
+  justify-self: center;
+  text-align: left;
+}
+
+/* Right column — Socials */
+.footer-col.socials {
+  justify-self: end;
+  text-align: left;
+}
+
+.footer-link {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.footer-link:hover {
+  opacity: 1;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-8);
+}
+
+.footer-social {
+  margin-top: var(--s-24);
+}
+
+.footer-legal {
+  margin-top: var(--s-16);
+  display: flex;
+  gap: var(--s-16);
+}
+
+@media (max-width: 900px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    row-gap: var(--s-32);
+  }
+
+  .footer-col.brand,
+  .footer-col.navigate,
+  .footer-col.socials {
+    justify-self: start;
     text-align: left;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-sans tracking-tight font-medium;
-    color: #0A0A0A;
+
+}
+
+/* =========================================================
+   SERVICES PAGE — LEDGER LAYOUT (SPINE NORMALISED)
+   ========================================================= */
+
+/* Service row container */
+.services-page .service-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: var(--s-48);
+  align-items: flex-start;
+
+  padding-block: var(--s-48); /* subordinate to section rhythm */
+  border-bottom: 1px solid var(--c-border);
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  position: relative;
+}
+
+/* Kill decorative leftovers */
+.services-page .service-row::before {
+  content: none;
+}
+
+
+/* LEFT BLOCK — Title + Description Grid */
+.services-page .service-row-text {
+  display: grid;
+  grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
+  column-gap: var(--s-32);
+  row-gap: var(--s-16);
+
+  align-items: start;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* Title — snap to spine scale */
+.services-page .service-row-title {
+  font-size: var(--font-h3);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 0;
+
+  transition: color 0.2s ease;
+}
+
+/* Hover accent */
+.services-page .service-row:hover .service-row-title {
+  color: var(--c-accent);
+}
+
+
+/* Description — restrained width */
+.services-page .service-row-description {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--c-muted);
+
+  margin: 0;
+  max-width: 680px;
+}
+
+
+/* CTA — baseline anchored */
+.services-page .service-row-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  white-space: nowrap;
+}
+
+/* Inherit global CTA behavior */
+.services-page .service-row-link,
+.services-page .service-row-link:hover {
+  color: inherit;
+}
+
+
+/* =========================================================
+   MOBILE COLLAPSE — SPINE SAFE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .services-page .service-row {
+    grid-template-columns: 1fr;
+    row-gap: var(--s-24);
   }
-  p {
-    @apply font-sans font-normal;
-    color: #2B2B2B;
+
+  .services-page .service-row-text {
+    grid-template-columns: 1fr;
+    row-gap: var(--s-12);
+  }
+
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+/* No viewport tricks. Section spacing handled by section-standard */
+.service-detail-hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Hero media */
+.service-detail-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+/* =========================================================
+   INTRO BLOCK
+   ========================================================= */
+
+/* Width + alignment inherited from container-polestar */
+.service-detail-intro {
+  width: 100%;
+}
+
+/* =========================================================
+   CAPABILITIES — LEDGER SYSTEM
+   ========================================================= */
+
+/* Reading width constraint + vertical rhythm */
+.service-detail-capabilities {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-64);
+  max-width: 760px;
+}
+
+/* Each capability row */
+.capability-block {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: var(--s-32);
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Vertical guide rail */
+.capability-block::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 28px;
+  bottom: 0;
+  width: 1px;
+  background: var(--c-border);
+}
+
+/* Kill rail on last item */
+.capability-block:last-child::before {
+  display: none;
+}
+
+/* Index number — restrained authority */
+.capability-index {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-muted);
+  line-height: 1;
+  padding-top: 4px;
+}
+
+/* Capability content */
+.capability-content h3 {
+  margin: 0 0 var(--s-8) 0;
+}
+
+.capability-content p {
+  margin: 0;
+}
+
+/* =========================================================
+   RELATED LINKS — CTA DRIVEN
+   ========================================================= */
+
+.service-detail-related-link {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.65;
+}
+
+/* Use global CTA arrow motion */
+.service-detail-related-link::after {
+  content: "→";
+  margin-left: var(--s-8);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.service-detail-related-link:hover {
+  opacity: 1;
+}
+
+.service-detail-related-link:hover::after {
+  transform: translateX(4px);
+  color: var(--c-accent);
+}
+
+.service-related-insights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-16);
+}
+
+/* =========================================================
+   BACK TO SERVICES CTA — SPINE SAFE
+   ========================================================= */
+
+.cta-back,
+.service-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-8);
+  font-size: var(--font-small);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Remove forward arrow */
+.cta-back::after,
+.service-back-link::after {
+  content: none !important;
+}
+
+/* Inject reversed arrow */
+.cta-back::before,
+.service-back-link::before {
+  content: "←";
+  display: inline-block;
+  line-height: 1;
+  margin-right: 4px;
+  transform: translateX(0);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Reverse motion */
+.cta-back:hover::before,
+.service-back-link:hover::before {
+  transform: translateX(-3px);
+  color: var(--c-accent);
+}
+
+
+/* =========================================================
+   INSIGHTS GATEWAY — SPINE COMPLIANT (HOME ONLY)
+   ========================================================= */
+
+.insights-gateway .insights-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--s-32);
+  align-items: start;
+}
+
+.insights-gateway .insights-heading-lockup {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-16);
+  white-space: nowrap;
+}
+
+.insights-gateway .insights-arrow {
+  font-size: 48px;
+  line-height: 1;
+  margin-top: 3px; /* optical alignment */
+}
+
+.insights-gateway .insights-heading {
+  font-size: var(--font-h1);
+  line-height: 1;
+  margin: 0;
+  font-weight: 400;
+}
+
+.insights-gateway .insights-content p {
+  max-width: 760px;
+  margin: 0 0 var(--s-16) 0;
+}
+
+/* =========================================================
+   INSIGHTS DETAIL — PROSE SYSTEM (SPINE SAFE)
+   ========================================================= */
+
+   .insight-prose {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-24);
+    width: 100%;
   }
   
-  img {
-    filter: grayscale(100%);
+  /* Paragraph rhythm */
+  .insight-prose p {
+    margin: 0;
+    line-height: 1.65;
+  }
+  
+  /* Section headings inside article */
+  .insight-prose h2,
+  .insight-prose h3 {
+    margin-top: var(--s-32);
+  }
+  
+  /* Lists */
+  .insight-prose ul,
+  .insight-prose ol {
+    margin: 0;
+    padding-left: var(--s-24);
+  
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-12);
+  }
+  
+  .insight-prose li {
+    margin: 0;
+  }
+  
+  /* =========================================================
+     INSIGHTS DETAIL — BODY LAYOUT (SPINE SAFE)
+     ========================================================= */
+  
+  /* Center article rail inside grid */
+  .insight-body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Only constrain INSIGHT article width */
+  .insight-body .reading-column {
+    max-width: 720px;
+  }
+  
+  /* =========================================================
+     INSIGHTS HEADER EXCERPT — GRID SAFE
+     ========================================================= */
+  
+  .insight-header-excerpt {
+    max-width: 640px;
+  }
+  
+  /* =========================================================
+     INSIGHT SERVICE CHIP — SPINE SAFE
+     ========================================================= */
+  
+  .insight-service-chip {
+    display: inline-flex;
+    align-items: center;
+  
+    font-size: 12px;
+    font-weight: 400;
+  
+    padding: 4px 10px;
+  
+    border: 1px solid var(--c-border);
+    border-radius: 999px;
+  
+    color: var(--c-text);
+    opacity: 0.75;
+  
+    margin-top: var(--s-8);
+  
+    transition: border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .insight-service-chip:hover {
+    border-color: var(--c-accent);
+    color: var(--c-accent);
+    opacity: 1;
+  }
+
+/* =========================================================
+   BACK TO TOP — QUIET, GLOBAL CONTROL
+   ========================================================= */
+
+.backtotop {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: 1px solid var(--c-border);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--c-text);
+
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+
+.backtotop:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+.backtotop:active {
+  transform: translateY(-1px);
+}
+
+/* Mobile positioning — reduce edge collision */
+@media (max-width: 700px) {
+  .backtotop {
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 
-@layer utilities {
-  .btn-polestar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 44px; /* Standard button height if not specified, usually Polestar uses minimal text links or outlined buttons */
-    padding-inline: 32px;
-    background-color: transparent;
-    border: 1px solid #0A0A0A;
-    color: #0A0A0A;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 16px;
-    font-weight: 400; /* Regular */
-    border-radius: 0px;
-    transition: opacity 0.2s ease;
-    cursor: pointer;
-    text-decoration: none;
+/* =========================================================
+   QUESTIONS PAGE — SPINE LEDGER LAYOUT
+   ========================================================= */
+
+   .questions-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-64);
   }
   
-  .btn-polestar:hover {
-    opacity: 0.8;
+  /* Each section row */
+  .questions-row {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    column-gap: var(--s-64);
+    align-items: start;
+  
+    padding-bottom: var(--s-48);
+    border-bottom: 1px solid var(--c-border);
+  }
+  
+  /* Kill divider on last */
+  .questions-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  /* LEFT COLUMN — SECTION LABEL */
+  .questions-left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-12);
+  }
+  
+  .questions-section-title {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Accent underline */
+  .questions-section-underline {
+    width: 48px;
+    height: 2px;
+    background: var(--c-accent);
+  }
+  
+  /* RIGHT COLUMN — QA STACK */
+  .questions-right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Individual QA row */
+  .qa-item {
+    padding: var(--s-24) 0;
+    border-bottom: 1px solid var(--c-border);
+    cursor: pointer;
+  }
+  
+  /* Kill divider on last QA inside group */
+  .questions-right .qa-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Question header row */
+  .qa-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: var(--s-24);
+  }
+  
+  /* Question text */
+  .qa-question {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--c-text);
+  }
+  
+  /* Chevron toggle */
+  .qa-toggle {
+    font-size: 18px;
+    color: var(--c-muted);
+    transition: transform 0.25s ease, color 0.25s ease;
+  }
+  
+  /* Rotate on open */
+  .qa-item.open .qa-toggle {
+    transform: rotate(90deg);
+    color: var(--c-accent);
+  }
+  
+  /* Answer block */
+  .qa-answer {
+    max-width: 720px;
+    margin-top: var(--s-16);
+  
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--c-muted);
+  }
+
+  
+
+ /* =========================================================
+   CONTACT FORM CTA — SPINE LOCK (FIXED)
+   ========================================================= */
+
+.section-contact .cta {
+  display: inline-flex;
+  align-items: center;
+
+  width: auto;              /* critical */
+  align-self: flex-start;   /* lock to left rail */
+
+  background: transparent;
+  border: none;
+
+  padding: 10px 0;          /* horizontal padding removed to avoid ghost width */
+
+  font-size: var(--font-small);
+  font-weight: 400;
+
+  color: var(--c-text);
+
+  cursor: pointer;
+
+  pointer-events: auto;     /* ensure click area = visual area */
+
+  transition: color 0.2s ease;
+}
+
+.section-contact .cta:hover {
+  color: var(--c-accent);
+}
+  
+  /* =========================================================
+     MOBILE COLLAPSE — SPINE SAFE
+     ========================================================= */
+  
+  @media (max-width: 900px) {
+  
+    .questions-row {
+      grid-template-columns: 1fr;
+      row-gap: var(--s-24);
+    }
+  
+    .questions-left {
+      padding-bottom: var(--s-16);
+    }
+  
+  }
+/* =========================================================
+   RESPONSIVE SPINE REINFORCEMENT — MOBILE + TABLET SAFE
+   ========================================================= */
+
+/* ---------- TABLET CONTAINER BREATHING ---------- */
+@media (max-width: 1024px) {
+  .container-polestar {
+    padding-inline: 48px;
+  }
+}
+
+/* ---------- NAVBAR TOUCH + HEIGHT OPTIMIZATION ---------- */
+@media (max-width: 900px) {
+  .navbar {
+    height: 56px;
+  }
+
+  .navbar-inner {
+    padding-inline: 24px;
+  }
+
+  .nav-links {
+    gap: var(--s-24);
+  }
+}
+
+/* ---------- SECTION RHYTHM COMPRESSION (MOBILE) ---------- */
+@media (max-width: 700px) {
+  .section-standard {
+    padding-top: var(--s-48);
+    padding-bottom: var(--s-48);
+  }
+}
+
+/* ---------- TYPOGRAPHY SCALE GUARD ---------- */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+/* ---------- READING COLUMN MOBILE SAFETY ---------- */
+@media (max-width: 700px) {
+  .reading-column {
+    max-width: 100%;
+  }
+}
+
+/* ---------- SERVICES + LEDGER MOBILE TUNING ---------- */
+@media (max-width: 900px) {
+  .services-page .service-row {
+    padding-block: var(--s-32);
+  }
+
+  .about-ledger li,
+  .about-principles-ledger li {
+    grid-template-columns: 48px 1fr;
+  }
+}
+
+/* ---------- QUESTIONS PAGE MOBILE REFINEMENT ---------- */
+@media (max-width: 700px) {
+  .questions-wrapper {
+    gap: var(--s-48);
+  }
+
+  .qa-question {
+    font-size: 15px;
+  }
+}
+
+/* ---------- CONTACT FORM MOBILE LOCK ---------- */
+@media (max-width: 900px) {
+  .contact-layout {
+    display: block;
+  }
+
+  .contact-form-column {
+    max-width: 100%;
+  }
+}
+
+/* ---------- CTA TOUCH TARGET SAFETY ---------- */
+@media (max-width: 700px) {
+  .cta,
+  .cta-primary,
+  .chevron-cta {
+    padding: 12px 0;
   }
 }
