@@ -7,6 +7,7 @@ import { metaImagesPlugin } from "./vite-plugin-meta-images";
 import mdx from "@mdx-js/rollup";
 
 export default defineConfig({
+  base: "/",
   plugins: [
     mdx({
       jsxImportSource: "react",
@@ -33,5 +34,6 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    assetsDir: "assets",
   },
 });
