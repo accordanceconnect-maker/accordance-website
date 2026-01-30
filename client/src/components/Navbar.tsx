@@ -3,21 +3,21 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
 
   useEffect(() => {
-    const updateViewport = () => {
+    const handler = () => {
       const mobile = window.innerWidth <= 900;
       setIsMobile(mobile);
 
+      // Kill mobile menu instantly when switching to desktop
       if (!mobile) {
         setOpen(false);
       }
     };
 
-    updateViewport();
-    window.addEventListener("resize", updateViewport);
-    return () => window.removeEventListener("resize", updateViewport);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
   }, []);
 
   return (
