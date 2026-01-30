@@ -1524,3 +1524,26 @@ p {
     font-size: 15px;
   }
 }
+
+/* MOBILE MENU TOGGLE — CLEAN ICON ONLY */
+.mobile-menu-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  font-size: 22px;
+  font-weight: 400;
+
+  cursor: pointer;
+  line-height: 1;
+  color: var(--c-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Kill ugly focus outline on mobile tap */
+.mobile-menu-toggle:focus {
+  outline: none;
+}
