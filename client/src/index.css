@@ -324,6 +324,22 @@ p {
     transform: scale(0.95);
   }
 
+  /* =========================================================
+   HARD NAVBAR VISIBILITY LOCK (FINAL OVERRIDE)
+   ========================================================= */
+
+/* Desktop: hamburger NEVER exists visually */
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* Mobile only */
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
 /* =========================================================
    HERO — SPINE COMPLIANT
    ========================================================= */
