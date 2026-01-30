@@ -3,17 +3,21 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Close mobile menu automatically on desktop resize
+  // Spine breakpoint authority
   useEffect(() => {
-    const handler = () => {
+    const checkViewport = () => {
+      setIsMobile(window.innerWidth <= 900);
       if (window.innerWidth > 900) {
         setOpen(false);
       }
     };
 
-    window.addEventListener("resize", handler);
-    return () => window.removeEventListener("resize", handler);
+    checkViewport();
+    window.addEventListener("resize", checkViewport);
+
+    return () => window.removeEventListener("resize", checkViewport);
   }, []);
 
   return (
@@ -25,7 +29,7 @@ export default function Navbar() {
           <Link href="/">Accordance</Link>
         </div>
 
-        {/* Desktop navigation */}
+        {/* Desktop navigation (never hidden by JS) */}
         <nav className="nav-links desktop-only">
           <Link href="/services">Advisory</Link>
           <Link href="/about">About</Link>
@@ -34,21 +38,21 @@ export default function Navbar() {
           <Link href="/contact">Engage</Link>
         </nav>
 
-        {/* Mobile hamburger */}
-        <div className="mobile-only">
+        {/* Mobile hamburger — rendered ONLY on mobile */}
+        {isMobile && (
           <button
-            className="mobile-menu-toggle"
+            className="mobile-menu-toggle mobile-only"
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation"
           >
             ☰
           </button>
-        </div>
+        )}
 
       </div>
 
-      {/* Mobile dropdown menu */}
-      {open && (
+      {/* Mobile dropdown — structurally isolated */}
+      {isMobile && open && (
         <div className="mobile-menu mobile-only">
           <Link href="/services" onClick={() => setOpen(false)}>Advisory</Link>
           <Link href="/about" onClick={() => setOpen(false)}>About</Link>
@@ -57,6 +61,7 @@ export default function Navbar() {
           <Link href="/contact" onClick={() => setOpen(false)}>Engage</Link>
         </div>
       )}
+
     </header>
   );
 }
