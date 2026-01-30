@@ -104,9 +104,7 @@ a {
   padding-inline: clamp(20px, 6vw, 80px);
 }
 
-@media (max-width: 900px) {
-  .container-polestar { padding-inline: 40px; }
-}
+
 
 @media (max-width: 600px) {
   .container-polestar { padding-inline: 20px; }
@@ -1413,5 +1411,116 @@ p {
   .cta-primary,
   .chevron-cta {
     padding: 12px 0;
+  }
+}
+
+/* =========================================================
+   MOBILE SPINE LOCK — FINAL PATCH
+   ========================================================= */
+
+   @media (max-width: 900px) {
+
+    /* Container — single authority */
+    .container-polestar {
+      padding-inline: 20px;
+    }
+  
+    /* Hero normalization */
+    .hero-section {
+      min-height: 60vh;
+    }
+  
+    /* Navbar breathing */
+    .navbar {
+      height: 56px;
+    }
+  
+    .navbar-inner {
+      padding-inline: 20px;
+    }
+  
+    /* Footer grid stability */
+    .footer-grid {
+      grid-template-columns: 1fr;
+      row-gap: var(--s-32);
+    }
+  
+    /* Services grid hard stack */
+    .services-grid,
+    .capabilities-grid,
+    .case-insights-grid {
+      grid-template-columns: 1fr !important;
+    }
+  
+    /* Questions page spacing fix */
+    .questions-left {
+      margin-bottom: var(--s-16);
+    }
+  
+    /* Section rhythm compression */
+    .section-standard {
+      padding-top: var(--s-48);
+      padding-bottom: var(--s-48);
+    }
+  
+    /* Typography downscale */
+    h1 {
+      font-size: 34px;
+      line-height: 1.1;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    /* Contact layout lock */
+    .contact-layout {
+      display: block;
+    }
+  
+    .contact-form-column {
+      max-width: 100%;
+    }
+  
+  }/* =========================================================
+   NAVBAR — MOBILE SPINE FIX (SURGICAL)
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Increase navbar height for touch comfort */
+  .navbar {
+    height: 64px;
+  }
+
+  /* Lock internal spacing */
+  .navbar-inner {
+    padding-inline: 20px;
+  }
+
+  /* Separate brand and hamburger visually */
+  .navbar .brand {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* Hamburger / mobile trigger spacing */
+  .mobile-only button,
+  .mobile-only svg {
+    padding: 8px;
+    margin-left: 8px;
+  }
+
+  /* Mobile menu panel spacing */
+  .mobile-menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    row-gap: 16px;
+  }
+
+  /* Mobile nav links breathing */
+  .mobile-menu a {
+    padding: 8px 0;
+    font-size: 15px;
   }
 }
