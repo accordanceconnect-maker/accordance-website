@@ -266,43 +266,63 @@ p {
 }
 
 /* =========================================================
-   NAVBAR — MOBILE VISIBILITY CONTROL (SPINE SAFE)
+   NAVBAR — MOBILE SPINE FIX (FINAL)
    ========================================================= */
 
-/* Default: desktop layout */
-.desktop-only {
-  display: flex;
-}
+   @media (max-width: 900px) {
 
-.mobile-only {
-  display: none;
-}
-
-/* Mobile breakpoint */
-@media (max-width: 900px) {
-
-  .desktop-only {
-    display: none;
+    .navbar {
+      height: 64px;
+    }
+  
+    .navbar-inner {
+      padding-inline: 20px;
+    }
+  
+    .navbar .brand {
+      font-size: 18px;
+      line-height: 1;
+    }
+  
+    .mobile-menu {
+      padding: 20px;
+      row-gap: 16px;
+    }
+  
+    .mobile-menu a {
+      padding: 8px 0;
+      font-size: 15px;
+    }
   }
-
-  .mobile-only {
+  
+  /* MOBILE HAMBURGER — CLEAN */
+  
+  .mobile-menu-toggle {
+    background: none;
+    border: none;
+  
+    padding: 8px;
+    margin-left: 8px;
+  
+    font-size: 22px;
+    line-height: 1;
+  
+    color: var(--c-accent);
+  
+    cursor: pointer;
+  
     display: flex;
     align-items: center;
+    justify-content: center;
   }
-
-  /* Mobile menu panel */
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-
-    border-top: 1px solid var(--c-border);
-    background: var(--c-bg);
-
-    padding: var(--s-24) clamp(20px, 6vw, 80px);
-    gap: var(--s-16);
+  
+  .mobile-menu-toggle:focus {
+    outline: none;
   }
-
-}
+  
+  .mobile-menu-toggle:active {
+    transform: scale(0.95);
+  }
 
 /* =========================================================
    HERO — SPINE COMPLIANT
@@ -334,6 +354,83 @@ p {
     align-items: center;
     min-height: calc(75vh - var(--navbar-h));
   }
+
+  }/* =========================================================
+   NAVBAR — MOBILE SPINE FIX (SURGICAL)
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Increase navbar height for touch comfort */
+  .navbar {
+    height: 64px;
+  }
+
+  /* Lock internal spacing */
+  .navbar-inner {
+    padding-inline: 20px;
+  }
+
+  /* Separate brand and hamburger visually */
+  .navbar .brand {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* Hamburger / mobile trigger spacing */
+  .mobile-only button,
+  .mobile-only svg {
+    padding: 8px;
+    margin-left: 8px;
+  }
+
+  /* Mobile menu panel spacing */
+  .mobile-menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    row-gap: 16px;
+  }
+
+  /* Mobile nav links breathing */
+  .mobile-menu a {
+    padding: 8px 0;
+    font-size: 15px;
+  }
+}
+
+/* MOBILE HAMBURGER — SPINE SAFE */
+
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+
+  color: var(--c-accent);
+
+  width: auto;
+  height: auto;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove tap highlight + ugly focus box */
+.mobile-menu-toggle:focus {
+  outline: none;
+}
+
+.mobile-menu-toggle:active {
+  transform: scale(0.95);
+}
 
   /* =========================================================
    HERO — MOBILE SPINE ADAPTATION (SURGICAL)
@@ -1515,79 +1612,4 @@ p {
       max-width: 100%;
     }
   
-  }/* =========================================================
-   NAVBAR — MOBILE SPINE FIX (SURGICAL)
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  /* Increase navbar height for touch comfort */
-  .navbar {
-    height: 64px;
-  }
-
-  /* Lock internal spacing */
-  .navbar-inner {
-    padding-inline: 20px;
-  }
-
-  /* Separate brand and hamburger visually */
-  .navbar .brand {
-    font-size: 18px;
-    line-height: 1;
-  }
-
-  /* Hamburger / mobile trigger spacing */
-  .mobile-only button,
-  .mobile-only svg {
-    padding: 8px;
-    margin-left: 8px;
-  }
-
-  /* Mobile menu panel spacing */
-  .mobile-menu {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    row-gap: 16px;
-  }
-
-  /* Mobile nav links breathing */
-  .mobile-menu a {
-    padding: 8px 0;
-    font-size: 15px;
-  }
-}
-
-/* MOBILE HAMBURGER — SPINE SAFE */
-
-.mobile-menu-toggle {
-  background: none;
-  border: none;
-
-  padding: 0;
-  margin: 0;
-
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1;
-
-  color: var(--c-accent);
-
-  width: auto;
-  height: auto;
-
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Remove tap highlight + ugly focus box */
-.mobile-menu-toggle:focus {
-  outline: none;
-}
-
-.mobile-menu-toggle:active {
-  transform: scale(0.95);
-}
+  
