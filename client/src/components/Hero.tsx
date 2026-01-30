@@ -16,19 +16,24 @@ export function Hero() {
       {/* Content layer */}
       <div className="hero-inner">
         <div className="container-polestar">
+          
+          {/* Spine width guard for mobile */}
+          <div className="reading-column">
 
-          <h1 id="hero-heading">
-            Mandate-based real estate <br />
-            advisory.
-          </h1>
+            <h1 id="hero-heading">
+              Mandate-based real estate <br />
+              advisory.
+            </h1>
 
-          <p className="hero-subline">
-            For structured, compliant real estate decisions.
-          </p>
+            <p className="hero-subline">
+              For structured, compliant real estate decisions.
+            </p>
 
-          <a href="#contact" className="cta">
-            Engage on a mandate
-          </a>
+            <a href="#contact" className="cta">
+              Engage on a mandate
+            </a>
+
+          </div>
 
         </div>
       </div>

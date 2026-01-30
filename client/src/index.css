@@ -335,6 +335,39 @@ p {
     min-height: calc(75vh - var(--navbar-h));
   }
 
+  /* =========================================================
+   HERO — MOBILE SPINE ADAPTATION (SURGICAL)
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Reduce hero vertical dominance */
+  .hero-section {
+    min-height: 560px;
+  }
+
+  /* Re-anchor content to upper reading rail */
+  .hero-inner {
+    align-items: flex-start;
+    min-height: auto;
+
+    padding-top: calc(var(--navbar-h) + var(--s-48));
+    padding-bottom: var(--s-64);
+  }
+
+  /* Force spine-safe text width */
+  .hero-inner .reading-column,
+  .hero-inner .container-polestar {
+    max-width: 100%;
+  }
+
+  /* Headline breathing room */
+  .hero-section h1 {
+    margin-bottom: var(--s-24);
+  }
+
+}
+
 /* Ensure hero headings respect the controlled reading column */
 
 /* =========================================================

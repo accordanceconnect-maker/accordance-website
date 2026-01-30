@@ -2,18 +2,17 @@ import { Link } from "wouter";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="navbar">
       <div className="container-polestar navbar-inner">
 
-        {/* Brand */}
         <div className="brand">
           <Link href="/">Accordance</Link>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop navigation (unchanged spine) */}
         <nav className="nav-links desktop-only">
           <Link href="/services">Advisory</Link>
           <Link href="/about">About</Link>
@@ -22,30 +21,27 @@ export default function Navbar() {
           <Link href="/contact">Engage</Link>
         </nav>
 
-        {/* Mobile Toggle */}
-        <div className="mobile-only">
-          <button
-            className="mobile-menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle navigation"
-          >
-            ☰
-          </button>
-        </div>
+        {/* Mobile hamburger */}
+        <button
+          className="mobile-menu-toggle mobile-only"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
 
       </div>
 
-      {/* Mobile Menu Panel */}
-      {menuOpen && (
-        <div className="mobile-menu">
-          <Link href="/services" onClick={() => setMenuOpen(false)}>Advisory</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link href="/insights" onClick={() => setMenuOpen(false)}>Insights</Link>
-          <Link href="/questions" onClick={() => setMenuOpen(false)}>Questions</Link>
-          <Link href="/contact" onClick={() => setMenuOpen(false)}>Engage</Link>
-        </div>
+      {/* Mobile dropdown */}
+      {open && (
+        <nav className="mobile-menu mobile-only">
+          <Link href="/services">Advisory</Link>
+          <Link href="/about">About</Link>
+          <Link href="/insights">Insights</Link>
+          <Link href="/questions">Questions</Link>
+          <Link href="/contact">Engage</Link>
+        </nav>
       )}
-
     </header>
   );
 }
