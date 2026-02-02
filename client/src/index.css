@@ -265,9 +265,6 @@ p {
   white-space: nowrap;
 }
 
-
-
-
    .hero-section {
     position: relative;
     min-height: 700px;
@@ -361,6 +358,37 @@ p {
     padding: 8px 0;
     font-size: 15px;
   }
+}
+
+/* =========================================================
+   NAVBAR — VISIBILITY AUTHORITY (FINAL)
+   ========================================================= */
+
+/* Desktop default */
+.desktop-only {
+  display: flex;
+}
+
+/* Mobile default */
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* Mobile breakpoint enforcement */
+@media (max-width: 900px) {
+
+  /* Kill desktop nav on mobile */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Enable hamburger */
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
   /* =========================================================
