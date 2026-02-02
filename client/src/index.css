@@ -265,84 +265,8 @@ p {
   white-space: nowrap;
 }
 
-/* =========================================================
-   NAVBAR — MOBILE SPINE FIX (FINAL)
-   ========================================================= */
 
-   @media (max-width: 900px) {
 
-    .navbar {
-      height: 64px;
-    }
-  
-    .navbar-inner {
-      padding-inline: 20px;
-    }
-  
-    .navbar .brand {
-      font-size: 18px;
-      line-height: 1;
-    }
-  
-    .mobile-menu {
-      padding: 20px;
-      row-gap: 16px;
-    }
-  
-    .mobile-menu a {
-      padding: 8px 0;
-      font-size: 15px;
-    }
-  }
-  
-  /* MOBILE HAMBURGER — CLEAN */
-  
-  .mobile-menu-toggle {
-    background: none;
-    border: none;
-  
-    padding: 8px;
-    margin-left: 8px;
-  
-    font-size: 22px;
-    line-height: 1;
-  
-    color: var(--c-accent);
-  
-    cursor: pointer;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .mobile-menu-toggle:focus {
-    outline: none;
-  }
-  
-  .mobile-menu-toggle:active {
-    transform: scale(0.95);
-  }
-
-  /* =========================================================
-   HARD NAVBAR VISIBILITY LOCK (FINAL OVERRIDE)
-   ========================================================= */
-
-/* Desktop: hamburger NEVER exists visually */
-.mobile-menu-toggle {
-  display: none;
-}
-
-/* Mobile only */
-@media (max-width: 900px) {
-  .mobile-menu-toggle {
-    display: flex;
-  }
-}
-
-/* =========================================================
-   HERO — SPINE COMPLIANT
-   ========================================================= */
 
    .hero-section {
     position: relative;
@@ -371,74 +295,62 @@ p {
     min-height: calc(75vh - var(--navbar-h));
   }
 
-  /* =========================================================
-   NAVBAR — MOBILE SPINE FIX (FINAL, CLEAN)
-   ========================================================= */
-
-/* Default state = DESKTOP (hamburger never visible) */
-.mobile-menu-toggle {
-  background: none;
-  border: none;
-
-  padding: 8px;
-  margin-left: 8px;
-
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1;
-
-  color: var(--c-accent);
-
-  cursor: pointer;
-
-  display: none; /* HARD DESKTOP LOCK */
-  align-items: center;
-  justify-content: center;
-}
-
-/* Remove tap highlight + ugly focus box */
-.mobile-menu-toggle:focus {
-  outline: none;
-}
-
-.mobile-menu-toggle:active {
-  transform: scale(0.95);
-}
-
 /* =========================================================
-   MOBILE ONLY OVERRIDES
+   NAVBAR — MOBILE SPINE FIX (SINGLE SOURCE OF TRUTH)
    ========================================================= */
 
+/* Desktop default */
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* Mobile only */
 @media (max-width: 900px) {
 
-  /* Touch-friendly navbar height */
   .navbar {
     height: 64px;
   }
 
-  /* Spine-safe horizontal breathing */
   .navbar-inner {
     padding-inline: 20px;
   }
 
-  /* Brand scale normalization */
   .navbar .brand {
     font-size: 18px;
     line-height: 1;
   }
 
-  /* Enable hamburger ONLY on mobile */
   .mobile-menu-toggle {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+
+    padding: 8px;
+    margin-left: 8px;
+
+    font-size: 22px;
+    line-height: 1;
+
+    color: var(--c-accent);
+    cursor: pointer;
   }
 
-  /* Mobile dropdown spacing */
+  .mobile-menu-toggle:focus {
+    outline: none;
+  }
+
+  .mobile-menu-toggle:active {
+    transform: scale(0.95);
+  }
+
   .mobile-menu {
     padding: 20px;
     row-gap: 16px;
   }
 
-  /* Mobile nav rhythm */
   .mobile-menu a {
     padding: 8px 0;
     font-size: 15px;
@@ -1625,4 +1537,4 @@ p {
       max-width: 100%;
     }
   
-  
+}
