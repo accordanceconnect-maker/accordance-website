@@ -391,6 +391,38 @@ p {
 
 }
 
+/* =========================================================
+   MOBILE MENU — STRUCTURAL FIX (FINAL)
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--c-bg);
+    border-bottom: 1px solid var(--c-border);
+
+    padding: 20px;
+
+    z-index: 200;
+  }
+
+  .mobile-menu a {
+    padding: 12px 0;
+    font-size: 15px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+}
+
   /* =========================================================
    HERO — MOBILE SPINE ADAPTATION (SURGICAL)
    ========================================================= */
