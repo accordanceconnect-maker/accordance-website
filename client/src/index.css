@@ -299,35 +299,31 @@ p {
    NAVBAR — MOBILE SPINE FIX (SINGLE SOURCE OF TRUTH)
    ========================================================= */
 
-/* Desktop default */
-/* Desktop default: hide hamburger */
+/* Desktop default — hamburger OFF */
 .mobile-menu-toggle {
   display: none;
-}
-
-/* Mobile only: show hamburger */
-@media (max-width: 900px) {
-  .mobile-menu-toggle {
-    display: flex;
-  }
 }
 
 /* Mobile only */
 @media (max-width: 900px) {
 
+  /* Navbar height for touch */
   .navbar {
     height: 64px;
   }
 
+  /* Inner spacing */
   .navbar-inner {
     padding-inline: 20px;
   }
 
+  /* Brand scale */
   .navbar .brand {
     font-size: 18px;
     line-height: 1;
   }
 
+  /* Hamburger ON */
   .mobile-menu-toggle {
     display: flex;
     align-items: center;
@@ -346,6 +342,7 @@ p {
     cursor: pointer;
   }
 
+  /* Interaction polish */
   .mobile-menu-toggle:focus {
     outline: none;
   }
@@ -354,6 +351,7 @@ p {
     transform: scale(0.95);
   }
 
+  /* Dropdown spacing */
   .mobile-menu {
     padding: 20px;
     row-gap: 16px;
@@ -1473,62 +1471,53 @@ p {
     .container-polestar {
       padding-inline: 20px;
     }
-  
+
     /* Hero normalization */
     .hero-section {
       min-height: 60vh;
     }
-  
-    /* Navbar breathing */
-    .navbar {
-      height: 56px;
-    }
-  
-    .navbar-inner {
-      padding-inline: 20px;
-    }
-  
+
     /* Footer grid stability */
     .footer-grid {
       grid-template-columns: 1fr;
       row-gap: var(--s-32);
     }
-  
+
     /* Services grid hard stack */
     .services-grid,
     .capabilities-grid,
     .case-insights-grid {
       grid-template-columns: 1fr !important;
     }
-  
+
     /* Questions page spacing fix */
     .questions-left {
       margin-bottom: var(--s-16);
     }
-  
+
     /* Section rhythm compression */
     .section-standard {
       padding-top: var(--s-48);
       padding-bottom: var(--s-48);
     }
-  
+
     /* Typography downscale */
     h1 {
       font-size: 34px;
       line-height: 1.1;
     }
-  
+
     h2 {
       font-size: 24px;
     }
-  
+
     /* Contact layout lock */
     .contact-layout {
       display: block;
     }
-  
+
     .contact-form-column {
       max-width: 100%;
     }
-  
+
 }
