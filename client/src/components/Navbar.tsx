@@ -3,17 +3,24 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Auto-close mobile menu when switching to desktop
+  // Detect viewport once + on resize
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 900) {
+    const checkViewport = () => {
+      const mobile = window.innerWidth <= 900;
+      setIsMobile(mobile);
+
+      // Force-close menu if switching to desktop
+      if (!mobile) {
         setOpen(false);
       }
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    checkViewport();
+    window.addEventListener("resize", checkViewport);
+
+    return () => window.removeEventListener("resize", checkViewport);
   }, []);
 
   return (
@@ -25,7 +32,7 @@ export default function Navbar() {
           <Link href="/">Accordance</Link>
         </div>
 
-        {/* Desktop Navigation (never touched by mobile logic) */}
+        {/* Desktop Navigation — spine untouched */}
         <nav className="nav-links desktop-only">
           <Link href="/services">Advisory</Link>
           <Link href="/about">About</Link>
@@ -34,19 +41,21 @@ export default function Navbar() {
           <Link href="/contact">Engage</Link>
         </nav>
 
-        {/* Mobile Hamburger (CSS controls visibility) */}
-        <button
-          className="mobile-menu-toggle"
-          onClick={() => setOpen(prev => !prev)}
-          aria-label="Toggle navigation"
-        >
-          ☰
-        </button>
+        {/* Mobile Hamburger — DOM guarded */}
+        {isMobile && (
+          <button
+            className="mobile-menu-toggle"
+            onClick={() => setOpen(prev => !prev)}
+            aria-label="Toggle navigation"
+          >
+            ☰
+          </button>
+        )}
 
       </div>
 
       {/* Mobile Dropdown Menu */}
-      {open && (
+      {isMobile && open && (
         <div className="mobile-menu">
           <Link href="/services" onClick={() => setOpen(false)}>Advisory</Link>
           <Link href="/about" onClick={() => setOpen(false)}>About</Link>
