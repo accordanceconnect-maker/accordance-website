@@ -300,8 +300,16 @@ p {
    ========================================================= */
 
 /* Desktop default */
+/* Desktop default: hide hamburger */
 .mobile-menu-toggle {
   display: none;
+}
+
+/* Mobile only: show hamburger */
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
 }
 
 /* Mobile only */
@@ -1384,20 +1392,6 @@ p {
   }
 }
 
-/* ---------- NAVBAR TOUCH + HEIGHT OPTIMIZATION ---------- */
-@media (max-width: 900px) {
-  .navbar {
-    height: 56px;
-  }
-
-  .navbar-inner {
-    padding-inline: 24px;
-  }
-
-  .nav-links {
-    gap: var(--s-24);
-  }
-}
 
 /* ---------- SECTION RHYTHM COMPRESSION (MOBILE) ---------- */
 @media (max-width: 700px) {

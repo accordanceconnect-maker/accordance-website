@@ -1,8 +1,20 @@
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  // Auto-close mobile menu when switching to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 900) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header className="navbar">
@@ -13,7 +25,7 @@ export default function Navbar() {
           <Link href="/">Accordance</Link>
         </div>
 
-        {/* Desktop navigation */}
+        {/* Desktop Navigation (never touched by mobile logic) */}
         <nav className="nav-links desktop-only">
           <Link href="/services">Advisory</Link>
           <Link href="/about">About</Link>
@@ -22,22 +34,20 @@ export default function Navbar() {
           <Link href="/contact">Engage</Link>
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile Hamburger (CSS controls visibility) */}
         <button
-          type="button"
-          className="mobile-menu-toggle mobile-only"
-          onClick={() => setOpen(!open)}
+          className="mobile-menu-toggle"
+          onClick={() => setOpen(prev => !prev)}
           aria-label="Toggle navigation"
-          aria-expanded={open}
         >
           ☰
         </button>
 
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile Dropdown Menu */}
       {open && (
-        <div className="mobile-menu mobile-only">
+        <div className="mobile-menu">
           <Link href="/services" onClick={() => setOpen(false)}>Advisory</Link>
           <Link href="/about" onClick={() => setOpen(false)}>About</Link>
           <Link href="/insights" onClick={() => setOpen(false)}>Insights</Link>
@@ -45,7 +55,6 @@ export default function Navbar() {
           <Link href="/contact" onClick={() => setOpen(false)}>Engage</Link>
         </div>
       )}
-
     </header>
   );
 }
