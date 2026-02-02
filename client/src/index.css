@@ -371,57 +371,17 @@ p {
     min-height: calc(75vh - var(--navbar-h));
   }
 
-  }/* =========================================================
-   NAVBAR — MOBILE SPINE FIX (SURGICAL)
+  /* =========================================================
+   NAVBAR — MOBILE SPINE FIX (FINAL, CLEAN)
    ========================================================= */
 
-@media (max-width: 900px) {
-
-  /* Increase navbar height for touch comfort */
-  .navbar {
-    height: 64px;
-  }
-
-  /* Lock internal spacing */
-  .navbar-inner {
-    padding-inline: 20px;
-  }
-
-  /* Separate brand and hamburger visually */
-  .navbar .brand {
-    font-size: 18px;
-    line-height: 1;
-  }
-
-  /* Hamburger / mobile trigger spacing */
-  .mobile-only button,
-  .mobile-only svg {
-    padding: 8px;
-    margin-left: 8px;
-  }
-
-  /* Mobile menu panel spacing */
-  .mobile-menu {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    row-gap: 16px;
-  }
-
-  /* Mobile nav links breathing */
-  .mobile-menu a {
-    padding: 8px 0;
-    font-size: 15px;
-  }
-}
-
-/* MOBILE HAMBURGER — SPINE SAFE */
-
+/* Default state = DESKTOP (hamburger never visible) */
 .mobile-menu-toggle {
   background: none;
   border: none;
 
-  padding: 0;
-  margin: 0;
+  padding: 8px;
+  margin-left: 8px;
 
   font-size: 22px;
   font-weight: 400;
@@ -429,12 +389,9 @@ p {
 
   color: var(--c-accent);
 
-  width: auto;
-  height: auto;
-
   cursor: pointer;
 
-  display: flex;
+  display: none; /* HARD DESKTOP LOCK */
   align-items: center;
   justify-content: center;
 }
@@ -446,6 +403,46 @@ p {
 
 .mobile-menu-toggle:active {
   transform: scale(0.95);
+}
+
+/* =========================================================
+   MOBILE ONLY OVERRIDES
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Touch-friendly navbar height */
+  .navbar {
+    height: 64px;
+  }
+
+  /* Spine-safe horizontal breathing */
+  .navbar-inner {
+    padding-inline: 20px;
+  }
+
+  /* Brand scale normalization */
+  .navbar .brand {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* Enable hamburger ONLY on mobile */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* Mobile dropdown spacing */
+  .mobile-menu {
+    padding: 20px;
+    row-gap: 16px;
+  }
+
+  /* Mobile nav rhythm */
+  .mobile-menu a {
+    padding: 8px 0;
+    font-size: 15px;
+  }
 }
 
   /* =========================================================
