@@ -25,7 +25,7 @@ export const services: Service[] = [
     id: "expansion-asset-deployment",
     name: "Expansion & Asset Deployment",
     short:
-      "Real estate decisions structured to support growth, scale, and long-term operating fit.",
+      "Leasing, acquisition, and portfolio structuring aligned to growth.",
     image:
       "https://images.unsplash.com/photo-1529429617124-3f7866f5f6bd?auto=format&fit=crop&w=1200&q=60",
 
@@ -67,7 +67,7 @@ export const services: Service[] = [
     id: "regulatory-statutory-tax",
     name: "Regulatory, Statutory & Tax Clarity",
     short:
-      "Legal, statutory, and tax perspective established before capital or timelines are fixed.",
+      "Title, compliance, and statutory alignment before capital or timeline moves.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60",
 
@@ -109,7 +109,7 @@ export const services: Service[] = [
     id: "capital-perspective",
     name: "Capital Perspective",
     short:
-      "Valuation and capital alignment across entry, positioning, and exit decisions.",
+      "Valuation and pricing alignment across entry and exit decisions.",
     image:
       "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=60",
 
@@ -151,7 +151,7 @@ export const services: Service[] = [
     id: "market-entry-advisory",
     name: "Market Entry Advisory",
     short:
-      "Local structuring for organisations entering new markets through real estate.",
+      "Micro-market intelligence for expansion across North India.",
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=60",
 
@@ -193,7 +193,7 @@ export const services: Service[] = [
     id: "international-residential-advisory",
     name: "International Residential Advisory",
     short:
-      "Profile-aligned residential investment advisory delivered through controlled execution frameworks.",
+      "Structured execution for institutional and international real estate capital.",
     image:
       "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=60",
 
