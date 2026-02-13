@@ -21,7 +21,6 @@ export default function About() {
                 Clarity precedes commitment.
               </motion.h2>
 
-              {/* Width-controlled intro copy */}
               <div className="about-intro-copy stack-24">
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -118,6 +117,59 @@ export default function About() {
                   <div className="who-item">Developers</div>
                   <div className="who-item">Corporates</div>
                 </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* LEADERSHIP */}
+          <section className="section-standard">
+            <div className="container-polestar stack-32">
+
+              <span className="label">Leadership</span>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Leadership
+              </motion.h2>
+
+              <div className="about-intro-copy stack-24">
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Aanjney Cowshik leads Accordance India Projects, a commercial real estate advisory firm operating across Delhi-NCR and expanding across North India.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  With an educational background in Finance as a Chartered Accountant, his work focuses on mandate-driven commercial land transactions, retail expansion alignment, developer asset monetisation, and structured regulatory due diligence.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Accordance operates across Gurgaon, New Gurgaon, Dwarka Expressway, Noida, Faridabad, and emerging North Indian corridors, advising developers, retailers, and institutional operators on capital-aligned real estate decisions.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Execution-led. Structurally disciplined. Institution-focused.
+                </motion.p>
+
               </div>
 
             </div>

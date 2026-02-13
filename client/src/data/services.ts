@@ -67,7 +67,7 @@ export const services: Service[] = [
     id: "regulatory-statutory-tax",
     name: "Regulatory, Statutory & Tax Clarity",
     short:
-      "Title, compliance, and statutory alignment before capital or timeline moves.",
+      "Title, compliance, and statutory alignment before commitments.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60",
 
