@@ -126,7 +126,7 @@ export default function About() {
           <section className="section-standard">
             <div className="container-polestar stack-32">
 
-              <span className="label">Leadership</span>
+              <span className="label">Founder</span>
 
               <motion.h2
                 initial={{ opacity: 0, y: 10 }}
