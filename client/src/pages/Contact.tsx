@@ -15,8 +15,8 @@ export default function Contact() {
 
             <p>
               Whether you are evaluating an acquisition, restructuring an
-              existing portfolio, or seeking statutory clarity, our team
-              engages on a mandate-only basis.
+              existing portfolio, or seeking expansion clarity, our team
+              is ready to engage.
             </p>
 
           </div>
