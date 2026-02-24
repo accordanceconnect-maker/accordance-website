@@ -22,7 +22,6 @@ export function Hero() {
 
             <h1 id="hero-heading">
               Advisory Driven Commercial Real Estate <br />
-              advisory.
             </h1>
 
             <p className="hero-subline">
