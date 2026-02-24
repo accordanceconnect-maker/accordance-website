@@ -136,13 +136,13 @@ export default function Contact() {
                       id="message"
                       name="message"
                       rows={5}
-                      placeholder="Briefly outline the mandate context"
+                      placeholder="Briefly outline the project context"
                     />
                   </div>
 
                   {/* CTA */}
                   <button type="submit" className="cta cta-form">
-                    Submit mandate inquiry
+                    Submit inquiry
                   </button>
 
                 </form>
