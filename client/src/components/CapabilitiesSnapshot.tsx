@@ -24,10 +24,10 @@ export function CapabilitiesSnapshot() {
     <div className="stack-32">
 
       {/* Section Heading */}
-      <span className="label">Mandates</span>
+      <span className="label">Framework</span>
 
       <h2 id="capabilities-heading">
-        How mandates are structured
+        How we work
       </h2>
 
       <p className="section-subheading">
