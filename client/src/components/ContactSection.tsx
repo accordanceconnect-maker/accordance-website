@@ -15,14 +15,13 @@ export function ContactSection() {
             </h2>
 
             <p>
-              We take on a limited number of mandates where structure,
-              statutory discipline and execution rigor are decisive.
+            We structure commercial, industrial, and institutional real estate decisions with discipline, capital awareness, and execution rigor.
             </p>
           </div>
 
           {/* CTA */}
           <a href="/contact" className="cta">
-            Request a mandate discussion
+            Initiate a Conversation
           </a>
 
         </div>
