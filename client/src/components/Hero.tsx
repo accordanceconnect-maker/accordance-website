@@ -21,7 +21,7 @@ export function Hero() {
           <div className="reading-column">
 
             <h1 id="hero-heading">
-            Real Estate, Directed by <br /> Strategy 
+            Real Estate, Directed by <br /> Strategy.
             </h1>
 
             <p className="hero-subline">
