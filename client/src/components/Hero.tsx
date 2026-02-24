@@ -21,7 +21,7 @@ export function Hero() {
           <div className="reading-column">
 
             <h1 id="hero-heading">
-              Advisory Driven Commercial Real Estate <br />
+            Real Estate, Directed by Strategy <br />
             </h1>
 
             <p className="hero-subline">
@@ -29,7 +29,7 @@ export function Hero() {
             </p>
 
             <a href="#contact" className="cta">
-              Engage on a mandate
+              Initiate a Conversation
             </a>
 
           </div>
