@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export function ContactSection() {
   return (
     <section
@@ -20,9 +22,9 @@ export function ContactSection() {
           </div>
 
           {/* CTA */}
-          <a href="/contact" className="cta">
+          <Link href="/contact" className="cta">
             Initiate a Conversation
-          </a>
+          </Link>
 
         </div>
       </div>
