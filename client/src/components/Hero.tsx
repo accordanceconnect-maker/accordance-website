@@ -21,7 +21,7 @@ export function Hero() {
           <div className="reading-column">
 
             <h1 id="hero-heading">
-              Mandate-based real estate <br />
+              Advisory Driven Commercial Real Estate <br />
               advisory.
             </h1>
 
