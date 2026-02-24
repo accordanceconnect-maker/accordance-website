@@ -1,4 +1,5 @@
-import  Navbar  from "@/components/Navbar";
+import { Link } from "wouter";
+import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { QuestionsSection } from "@/components/QuestionsSection";
 
@@ -17,20 +18,19 @@ export default function Questions() {
         <section className="section-standard">
           <div className="container-polestar stack-32">
 
-            <span className="label">FREQUENTLY ASKED</span>
+            <span className="label">Architecture</span>
 
-            <h1>Questions</h1>
+            <h1>Understanding Accordance</h1>
 
             <div className="reading-column">
               <p>
-                Clear answers to the questions we are most often asked about our work,
-                our approach, and how mandates operate with Accordance.
+               Direct responses to common questions about our engagement structure, transaction handling, and execution scope.
               </p>
             </div>
 
-            <a href="/contact" className="chevron-cta">
+            <Link to="/contact" className="chevron-cta">
               Contact us
-            </a>
+            </Link>
 
           </div>
         </section>

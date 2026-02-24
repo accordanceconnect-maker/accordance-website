@@ -9,15 +9,15 @@ const sections: Section[] = [
     items: [
       {
         q: "What is Accordance India Projects?",
-        a: "Accordance is a mandate-led real estate acquisition advisory. We support businesses and institutions in acquiring, leasing, or divesting real estate through a structured process that runs from requirement definition to transaction closure. Our focus is decision quality, execution control, and long-term suitability."
+        a: "Accordance is a commercial real estate advisory firm operating across key and emerging commercial corridors in India.\n\nWe advise brands, developers, and investors on leasing, acquisitions, and commercial asset positioning.\n\nOur role is to bring clarity to real estate decisions before capital is committed."
       },
       {
-        q: "How are you different from brokers?",
-        a: "We do not optimise for inventory movement. We optimise for mandate outcomes. Advisory governs decisions, while execution is tightly controlled. Where brokerage is required, it is engaged as execution support, not as the driver of strategy."
+        q: "What defines your advisory approach?",
+        a: "Our work begins with evaluation — location logic, regulatory position, commercial terms, and long-term viability.\n\nWe prioritise informed positioning over transactional speed.\n\nEvery engagement is aligned to objective, scope, and commercial intent."
       },
       {
         q: "Who typically engages Accordance?",
-        a: "CFOs, CXOs, promoters, family offices, and investment committees who understand that real estate mistakes are expensive and slow to unwind."
+        a: "We are engaged by:\n\n• Retail brands expanding into growth corridors\n• Developers structuring commercial inventory\n• Institutional and private investors evaluating assets\n• Family offices assessing capital deployment in real estate\n\nEngagements are selective and objective-led."
       }
     ]
   },
@@ -25,16 +25,16 @@ const sections: Section[] = [
     title: "Advisory & Engagement",
     items: [
       {
-        q: "What exactly do you do for clients?",
-        a: "We manage the full acquisition lifecycle: requirement modelling, asset filtering, negotiation leadership, legal and statutory coordination, and transaction execution. Advisory sets the direction. Execution ensures outcomes."
+        q: "What does your advisory typically cover?",
+        a: "Our advisory spans:\n\n• Corridor and location assessment\n• Site identification and evaluation\n• Commercial term review and negotiation support\n• Transaction coordination\n• Statutory and diligence alignment\n\nThe emphasis is considered movement, not reactive execution."
       },
       {
-        q: "Do you advise on buying and leasing assets?",
-        a: "Yes. We support acquisitions, divestments, and lease transactions. The structure remains consistent regardless of format."
+        q: "Do you represent brands, developers, or investors?",
+        a: "Yes.\n\nWe represent brands seeking expansion, developers positioning commercial supply, and investors evaluating acquisitions — across key and emerging commercial corridors in India.\n\nRepresentation is defined clearly at the outset."
       },
       {
-        q: "How are engagements and fees structured?",
-        a: "Engagements are mandate-based with defined scope and timelines. Advisory is typically fixed-fee. Transaction execution fees apply where we manage outcomes. All commercials are documented upfront."
+        q: "How are engagements structured?",
+        a: "Engagements are structured based on scope, transaction complexity, and alignment requirements.\n\nWe operate through defined representation agreements to ensure clarity of role and accountability throughout the transaction lifecycle."
       }
     ]
   },
@@ -42,16 +42,16 @@ const sections: Section[] = [
     title: "Real Estate & Process",
     items: [
       {
-        q: "What transaction types do you handle?",
-        a: "Commercial offices, industrial and logistics assets, institutional real estate, development land, and portfolio transactions. We operate at institutional scale."
+        q: "What transaction formats do you handle?",
+        a: "We handle:\n\n• Retail leasing (high-street, mall, and SCO formats)\n• Commercial asset acquisition\n• Developer-side positioning\n• Strategic portfolio alignment\n\nOur focus remains commercial and capital-sensitive assets."
       },
       {
-        q: "What does your due diligence cover?",
-        a: "Title validation, encumbrance analysis, zoning and statutory compliance, tax exposure, and operational suitability. Findings are synthesised into decision-ready recommendations."
+        q: "What does your due diligence framework include?",
+        a: "Our review includes:\n\n• Title position and statutory compliance\n• Zoning and land-use validation\n• Lease structure and documentation review\n• Commercial defensibility assessment\n\nSpecialist coordination is undertaken where required."
       },
       {
-        q: "How do you manage execution risk?",
-        a: "Through milestone-led sequencing, early risk identification, and disciplined stakeholder coordination. If a transaction is likely to derail, clients are informed early."
+        q: "How do you approach risk in commercial real estate transactions?",
+        a: "Risk is addressed through early evaluation of regulatory exposure, commercial terms, and structural alignment.\n\nThe objective is long-term defensibility and stability — not short-term closure."
       }
     ]
   }
