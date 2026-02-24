@@ -27,10 +27,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Accordance India Projects is a mandate–based real estate advisory
-                  working across commercial, industrial, institutional, and
-                  warehousing assets in India. Our work sits at the intersection
-                  of capital, land, regulation and disciplined execution.
+                  Accordance India Projects is a commercial real estate advisory firm operating across key and emerging commercial corridors in India.
                 </motion.p>
 
                 <motion.p
@@ -38,10 +35,15 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  We operate as an advisory partner where clarity, statutory
-                  certainty and transaction structure determine outcomes. Our
-                  role is to reduce uncertainty before capital, reputation or
-                  time is committed.
+                  We advise on commercial, institutional, industrial, and warehousing assets — aligning capital, land, and regulatory position before transactions are undertaken.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Our role is to reduce uncertainty before capital, reputation, or time is committed.
                 </motion.p>
               </div>
 
@@ -61,10 +63,10 @@ export default function About() {
               </motion.h2>
 
               <ol className="about-ledger">
-                <li>Every decision balances regulation, capital and long-term operating fit.</li>
-                <li>Mandate discipline provides structure before negotiation begins.</li>
-                <li>Statutory clarity and documentation reduce execution risk.</li>
-                <li>Real estate decisions are engineered, not improvised.</li>
+                <li>Understanding intent, capital and scope.</li>
+                <li>Mapping logics, feasibility and strategy.</li>
+                <li>Aligning assets, terms and timing.</li>
+                <li>Executing with long-term defensibility.</li>
               </ol>
 
             </div>
@@ -84,10 +86,10 @@ export default function About() {
 
               <ol className="about-principles-ledger">
                 <li><span>Long-term alignment over short-term optimisation.</span></li>
-                <li><span>Mandate discipline guides execution.</span></li>
-                <li><span>Statutory clarity before negotiation.</span></li>
-                <li><span>Documentation over assumption.</span></li>
-                <li><span>Precision over promotion.</span></li>
+                <li><span>Deliberate by design. Depth over noise.</span></li>
+                <li><span>Not every opportunity is pursued.</span></li>
+                <li><span>Documentation over assumptions.</span></li>
+                <li><span>Position over promotion.</span></li>
               </ol>
 
             </div>
@@ -143,7 +145,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Aanjney Cowshik leads Accordance India Projects, a commercial real estate advisory firm operating across Delhi-NCR and expanding across North India.
+                  Aanjney Cowshik leads Accordance India Projects, a commercial real estate advisory operating across key and emerging corridors in North India.
                 </motion.p>
 
                 <motion.p
@@ -151,7 +153,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  With an educational background in Finance as a Chartered Accountant, his work focuses on mandate-driven commercial land transactions, retail expansion alignment, developer asset monetisation, and structured regulatory due diligence.
+                  With a background in finance as a Chartered Accountant, his work sits at the intersection of capital structure, land strategy, regulatory positioning, and transaction architecture.
                 </motion.p>
 
                 <motion.p
@@ -159,7 +161,8 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Accordance operates across Gurgaon, New Gurgaon, Dwarka Expressway, Noida, Faridabad, and emerging North Indian corridors, advising developers, retailers, and institutional operators on capital-aligned real estate decisions.
+                  He advises developers, retailers, and institutional operators on decisions where capital exposure and long-term positioning matter.
+
                 </motion.p>
 
                 <motion.p
@@ -167,7 +170,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Execution-led. Structurally disciplined. Institution-focused.
+                  Deliberate. Structured. Aligned.
                 </motion.p>
 
               </div>
