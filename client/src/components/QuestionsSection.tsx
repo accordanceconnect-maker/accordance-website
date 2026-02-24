@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
 type QA = { q: string; a: string };
 type Section = { title: string; items: QA[] };
@@ -64,6 +64,51 @@ export function QuestionsSection() {
     setOpenKey(openKey === key ? null : key);
   };
 
+  const formatAnswer = (text: string) => {
+    const lines = text.split("\n");
+    const elements: ReactNode[] = [];
+    let bulletBuffer: string[] = [];
+
+    lines.forEach((line, index) => {
+      if (line.startsWith("• ")) {
+        bulletBuffer.push(line.replace("• ", ""));
+      } else {
+        if (bulletBuffer.length > 0) {
+          elements.push(
+            <ul key={`ul-${index}`} className="qa-bullet-list">
+              {bulletBuffer.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
+          );
+          bulletBuffer = [];
+        }
+
+        if (line.trim() !== "") {
+          elements.push(
+            <p key={index} className="qa-paragraph">
+              {line}
+            </p>
+          );
+        } else {
+          elements.push(<div key={index} style={{ height: "12px" }} />);
+        }
+      }
+    });
+
+    if (bulletBuffer.length > 0) {
+      elements.push(
+        <ul key="ul-last" className="qa-bullet-list">
+          {bulletBuffer.map((b, i) => (
+            <li key={i}>{b}</li>
+          ))}
+        </ul>
+      );
+    }
+
+    return elements;
+  };
+
   return (
     <div className="questions-wrapper">
 
@@ -100,7 +145,7 @@ export function QuestionsSection() {
 
                   {isOpen && (
                     <div className="qa-answer">
-                      {item.a}
+                      {formatAnswer(item.a)}
                     </div>
                   )}
 
