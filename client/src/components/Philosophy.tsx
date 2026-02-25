@@ -17,8 +17,8 @@ export default function Philosophy() {
         </p>
         
         <p>
-        We focus on choices with lasting consequence — where trade-offs are surfaced early, positioning is deliberate, and risk is assumed consciously
-        rather than reactively. When uncertainty is reduced, conviction increases — and decisions move with greater velocity.
+        We focus on choices with lasting consequences, where trade-offs are surfaced early, positioning is deliberate, and risk is assumed consciously
+        rather than reactively. When uncertainty is reduced, conviction increases and with it, decisions move with greater velocity.
 
         </p>
 
