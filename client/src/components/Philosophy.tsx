@@ -8,16 +8,20 @@ export default function Philosophy() {
         <h2>Clarity precedes commitment.</h2>
 
         <p>
-          Structure is not an aesthetic choice. It is the mechanism by which
-          uncertainty is reduced before capital, reputation, or time is deployed.
+        Structure is not ornamental. It is how exposure is understood before capital, reputation, or time is deployed.
         </p>
 
         <p>
-          Our work centers on decisions with lasting consequence. We apply
-          statutory precision and disciplined execution, so that when a mandate
-          advances, its implications are understood and its trade-offs are
-          consciously accepted.
+        In commercial real estate, momentum often replaces analysis. We take the opposite view. Decisions are shaped first by regulatory position,
+        capital structure, land intelligence, and long-term operating alignment.
         </p>
+        
+        <p>
+        We focus on choices with lasting consequence — where trade-offs are surfaced early, positioning is deliberate, and risk is assumed consciously
+        rather than reactively. When uncertainty is reduced, conviction increases — and decisions move with greater velocity.
+
+        </p>
+
       </div>
     </section>
   );
