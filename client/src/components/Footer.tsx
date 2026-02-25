@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 export function Footer() {
   return (
     <footer
@@ -80,11 +81,11 @@ export function Footer() {
               aria-labelledby="footer-nav-heading"
             >
               <div className="footer-links">
-                <a className="footer-link" href="/">Home</a>
-                <a className="footer-link" href="/services">Advisory</a>
-                <a className="footer-link" href="/about">About</a>
-                <a className="footer-link" href="/insights">Insights</a>
-                <a className="footer-link" href="/contact">Engage</a>
+                <Link className="footer-link" to="/">Home</Link>
+                <Link className="footer-link" to="/services">Advisory</Link>
+                <Link className="footer-link" to="/about">About</Link>
+                <Link className="footer-link" to="/insights">Insights</Link>
+                <Link className="footer-link" to="/contact">Engage</Link>
               </div>
             </nav>
           </div>
@@ -104,7 +105,7 @@ export function Footer() {
             aria-label="Legal"
           >
             {/* WORKING PRIVACY LINK */}
-            <a href="/privacy-policy">Privacy Policy</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
 
             {/* Reserved for legal page */}
             
