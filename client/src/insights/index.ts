@@ -16,6 +16,10 @@ import MarketEntryBrokerRetailExpansion, {
   meta as MarketEntryBrokerRetailExpansionMeta,
 } from "./market-entry-broker-retail-expansion.mdx";
 
+import RetailIsSegmentingNotSlowing, {
+  meta as RetailIsSegmentingNotSlowingMeta,
+} from "./retail-is-segmenting-not-slowing.mdx";
+
 /*
 ==========================================================
 CANONICAL INSIGHTS REGISTRY — SPINE CONTROLLED
@@ -137,6 +141,12 @@ export const insights: InsightEntry[] = [
     meta: MarketEntryBrokerRetailExpansionMeta as InsightMeta,
     Component: MarketEntryBrokerRetailExpansion,
   },
+
+  {
+    meta: RetailIsSegmentingNotSlowingMeta as InsightMeta,
+    Component: RetailIsSegmentingNotSlowing,
+  },
+  
 ];
 
 /*
