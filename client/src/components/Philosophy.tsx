@@ -4,22 +4,19 @@ export default function Philosophy() {
   return (
     <section className="section-standard philosophy">
       <div className="philosophy-content reading-column">
-        <span className="label">Philosophy</span>
-        <h2>Clarity precedes commitment.</h2>
+        <span className="label">Positioning</span>
+        <h2>Active in transactions.</h2>
 
         <p>
-        Structure is not ornamental. It is how exposure is understood before capital, reputation, or time is deployed.
+        We operate within active commercial corridors, engaging across both sides of retail and land transactions.
         </p>
 
         <p>
-        In commercial real estate, momentum often replaces analysis. We take the opposite view. Decisions are shaped first by regulatory position,
-        capital structure, land intelligence, and long-term operating alignment.
+        Work involves site evaluation, commercial alignment, and deal structuring — carried through to execution.
         </p>
-        
-        <p>
-        We focus on choices with lasting consequences, where trade-offs are surfaced early, positioning is deliberate, and risk is assumed consciously
-        rather than reactively. When uncertainty is reduced, conviction increases and with it, decisions move with greater velocity.
 
+        <p>
+        We stay within transactions, not outside them, ensuring decisions are made with clarity before movement.
         </p>
 
       </div>
