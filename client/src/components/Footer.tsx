@@ -12,12 +12,11 @@ export function Footer() {
           {/* BRAND / POSITIONING */}
           <div className="footer-col brand">
             <h2 id="footer-heading" className="footer-brand">
-              Accordance India Projects
+              Accordance India
             </h2>
 
             <p>
-              Mandate-based real estate advisory supporting structured <br />
-              decision-making across land, assets and capital allocation.
+              Commercial real estate advisory across retail and land, with a focus on structured, well-aligned transactions.
             </p>
 
             <div className="footer-contact">
@@ -82,7 +81,7 @@ export function Footer() {
             >
               <div className="footer-links">
                 <Link className="footer-link" to="/">Home</Link>
-                <Link className="footer-link" to="/services">Advisory</Link>
+                <Link className="footer-link" to="/services">Services</Link>
                 <Link className="footer-link" to="/about">About</Link>
                 <Link className="footer-link" to="/insights">Insights</Link>
                 <Link className="footer-link" to="/contact">Engage</Link>
@@ -97,7 +96,7 @@ export function Footer() {
         {/* BOTTOM BAR */}
         <div className="footer-bottom">
           <div className="footer-copy footer-copy-spaced">
-            © 2025 Accordance India Projects. All rights reserved.
+            © 2025 Accordance India. All rights reserved.
           </div>
 
           <nav
