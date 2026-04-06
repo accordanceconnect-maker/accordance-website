@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 
 const capabilities = [
   {
-    title: "Strategy",
+    title: "Evaluate",
     description:
-      "Structured frameworks aligning land, capital, regulation, and operating intent before commitment."
+      "We assess corridors, sites, and assets across retail and land transactions, establishing commercial viability, regulatory position, and transaction fit."
   },
   {
-    title: "Execution",
+    title: "Structure",
     description:
-      "Disciplined sequencing that converts approved strategy into compliant, time-defined outcomes."
+      "We align commercial terms, documentation, and stakeholder positions, integrating legal and financial structure before movement."
   },
   {
-    title: "Impact",
+    title: "Execute",
     description:
-      "Decisions designed to remain defensible through negotiation, scrutiny, and long-term holding."
+      "We drive transactions to closure through negotiation, coordination, and on-ground alignment across all involved parties."
   }
 ];
 
@@ -24,14 +24,14 @@ export function CapabilitiesSnapshot() {
     <div className="stack-32">
 
       {/* Section Heading */}
-      <span className="label">Framework</span>
+      <span className="label">Process</span>
 
       <h2 id="capabilities-heading">
-        How we work
+        How transactions move
       </h2>
 
       <p className="section-subheading">
-        Every engagement follows a defined sequence to reduce uncertainty before capital, reputation, or time is committed.
+        Every engagement is structured across evaluation, alignment, and execution — ensuring clarity before and during transaction movement.
       </p>
 
       {/* Capabilities Grid */}
