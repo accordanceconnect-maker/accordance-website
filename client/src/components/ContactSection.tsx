@@ -13,11 +13,11 @@ export function ContactSection() {
           {/* Heading */}
           <div className="stack-16">
             <h2 id="contact-heading">
-              Engagement begins with clarity.
+              Engage on active requirements.
             </h2>
 
             <p>
-            We structure commercial, industrial, and institutional real estate decisions with discipline, capital awareness, and execution rigor.
+            We are active across retail leasing and land transactions in NCR corridors, working with brands, developers, and capital on live requirements.
             </p>
           </div>
 
