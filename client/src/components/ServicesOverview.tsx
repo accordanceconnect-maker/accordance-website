@@ -8,7 +8,7 @@ export function ServicesOverview() {
 
         {/* Section Heading */}
         <span className="label">Services</span>
-        <h2 id="services-heading" className="section-heading">What we enable</h2>
+        <h2 id="services-heading" className="section-heading">What we execute</h2>
 
         {/* Services Grid */}
         <div className="services-grid">
@@ -20,10 +20,10 @@ export function ServicesOverview() {
             viewport={{ once: true }}
             transition={{ duration: 0.25 }}
           >
-            <h3 className="service-title">Expansion Strategy</h3>
+            <h3 className="service-title">Retail Leasing</h3>
             <p>
-              Decision architecture for site selection, feasibility and acquisition sequencing.
-              Location logic, access, logistics and operating constraints are resolved.
+              We align brands to active commercial corridors, identifying and evaluating sites based on format fit, catchment strength, and commercial viability.
+              Engagement includes site selection, commercial terms, and transaction support through closure.
             </p>
           </motion.div>
 
@@ -34,10 +34,10 @@ export function ServicesOverview() {
             viewport={{ once: true }}
             transition={{ duration: 0.25, delay: 0.06 }}
           >
-            <h3 className="service-title">Regulatory Clarity</h3>
+            <h3 className="service-title">Land Transactions</h3>
             <p>
-              Title certainty and statutory diagnostics that surface zoning, compliance and
-              ownership risk early.
+              We work with developers and investors on acquisition, positioning, and exit alignment across active land corridors.
+              Transactions are structured with clarity on use, pricing logic, and execution pathway.
             </p>
           </motion.div>
 
@@ -48,11 +48,10 @@ export function ServicesOverview() {
             viewport={{ once: true }}
             transition={{ duration: 0.25, delay: 0.12 }}
           >
-            <h3 className="service-title">Capital View</h3>
+            <h3 className="service-title">Structuring</h3>
             <p>
-              Clear thinking and valuation<br />
-              discipline test pricing logic<br />
-              and align capital.
+              We integrate legal, statutory, and commercial structure into transactions, ensuring alignment before execution.
+              Documentation, compliance, and deal terms are resolved as part of the process — not after.
             </p>
           </motion.div>
 
@@ -60,11 +59,10 @@ export function ServicesOverview() {
 
         {/* Thesis Block */}
         <div className="thesis-block services-thesis">
-          <h3>Advisory, not brokerage.</h3>
+          <h3>Execution, not intermediation.</h3>
 
           <p>
-            Structure precedes capital. We remove uncertainty before price, timelines or
-            reputation are risked.
+            We operate across both sides of transactions, aligning brands, developers, and capital within active commercial corridors.
           </p>
 
           <a
@@ -72,7 +70,7 @@ export function ServicesOverview() {
             href="/services"
             aria-label="View Advisory Services"
           >
-            View Advisory
+            View Engagement
           </a>
         </div>
 
