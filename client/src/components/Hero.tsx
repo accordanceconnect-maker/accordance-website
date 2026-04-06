@@ -1,4 +1,5 @@
 import heroImage from "../assets/images/BlueHero.png";
+import { Link } from "wouter";
 
 export function Hero() {
   return (
@@ -21,16 +22,21 @@ export function Hero() {
           <div className="reading-column">
 
             <h1 id="hero-heading">
-            Real Estate, Directed by <br /> Strategy.
+              Retail. Land. Transactions — <br /> structured to close.
             </h1>
 
             <p className="hero-subline">
-              For structured, compliant real estate decisions.
+              Active across New Gurgaon, Dwarka Expressway, and emerging NCR corridors — aligning brands, developers, and capital in live transactions.
             </p>
 
-            <a href="#contact" className="cta">
+            <div className="hero-signals">
+              <p>Current Focus:</p>
+              <p>New Gurgaon · Dwarka Expressway · Retail (1000–2000 sq ft) · Select Land Corridors</p>
+            </div>
+
+            <Link href="/contact" className="cta">
               Initiate a Conversation
-            </a>
+            </Link>
 
           </div>
 
