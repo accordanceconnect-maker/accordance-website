@@ -26,13 +26,8 @@ export function Hero() {
             </h1>
 
             <p className="hero-subline">
-              Active across New Gurgaon, Dwarka Expressway, and emerging NCR corridors — aligning brands, developers, and capital in live transactions.
+              
             </p>
-
-            <div className="hero-signals">
-              <p>Current Focus:</p>
-              <p>New Gurgaon · Dwarka Expressway · Retail (1000–2000 sq ft) · Select Land Corridors</p>
-            </div>
 
             <Link href="/contact" className="cta">
               Initiate a Conversation
