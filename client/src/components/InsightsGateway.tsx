@@ -15,12 +15,11 @@ export function InsightsGateway() {
         {/* RIGHT — COPY + CTA */}
         <div className="insights-content stack-16">
           <p>
-            Observations shaped by mandate execution, regulatory interpretation,
-            and capital allocation across real estate decisions.
+            Market observations from active transactions, corridor movement, and deal execution.
           </p>
 
           <Link href="/insights" className="cta">
-            View all insights
+            Explore insights →
           </Link>
         </div>
 
