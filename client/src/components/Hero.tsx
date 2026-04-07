@@ -1,4 +1,4 @@
-import heroImage from "../assets/images/BlueHero.png";
+import heroImage from "../assets/images/Accordance Website Hero Image.png";
 import { Link } from "wouter";
 
 export function Hero() {
