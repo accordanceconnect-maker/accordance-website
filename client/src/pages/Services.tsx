@@ -13,12 +13,10 @@ export default function Services() {
 
             <span className="label">Services</span>
 
-            <h1>What we do</h1>
+            <h1>Engagement scope</h1>
 
             <p className="reading-column">
-              Advisory that reduces ambiguity and creates repeatable outcomes.
-              We focus on practical clarity — on what moves value and removes
-              friction.
+              We work across retail leasing and land transactions with brands, developers, and investors.
             </p>
 
           </div>
@@ -31,7 +29,7 @@ export default function Services() {
             <div
               className="services-ledger"
               role="list"
-              aria-label="Service advisory areas"
+              aria-label="Service engagement areas"
             >
               {services.map((service) => (
                 <ServiceRow key={service.id} service={service} />
