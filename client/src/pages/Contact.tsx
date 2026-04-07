@@ -14,7 +14,7 @@ export default function Contact() {
             <h1>Engage on a requirement.</h1>
 
             <p>
-              We work with brands, developers, and investors across retail leasing and land transactions. Share your requirement, and we will align on scope and next steps.
+              Share with us your requirement, and we will align on scope and next steps.
             </p>
 
           </div>
