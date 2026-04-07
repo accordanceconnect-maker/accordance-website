@@ -42,7 +42,7 @@ export default function Contact() {
                   <input type="text" name="_gotcha" style={{ display: "none" }} />
 
                   <div className="form-field">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name" className="form-label">Name</label>
                     <input
                       id="name"
                       name="name"
@@ -53,7 +53,7 @@ export default function Contact() {
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email" className="form-label">Email</label>
                     <input
                       id="email"
                       name="email"
@@ -64,7 +64,7 @@ export default function Contact() {
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="phone">Phone Number</label>
+                    <label htmlFor="phone" className="form-label">Phone Number</label>
                     <input
                       id="phone"
                       name="phone"
@@ -81,13 +81,13 @@ export default function Contact() {
                       type="checkbox"
                       value="Yes"
                     />
-                    <label htmlFor="whatsapp">
+                    <label htmlFor="whatsapp" className="form-label">
                       This number is available on WhatsApp
                     </label>
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="client-type">Client Type</label>
+                    <label htmlFor="client-type" className="form-label">Client Type</label>
                     <select id="client-type" name="clientType" required>
                       <option value="">Select</option>
                       <option>Retail / Commercial</option>
@@ -102,7 +102,7 @@ export default function Contact() {
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="intent">Transaction Intent</label>
+                    <label htmlFor="intent" className="form-label">Transaction Intent</label>
                     <select id="intent" name="transactionIntent" required>
                       <option value="">Select</option>
                       <option>Acquisition</option>
@@ -115,7 +115,7 @@ export default function Contact() {
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="communication">Preferred Communication</label>
+                    <label htmlFor="communication" className="form-label">Preferred Communication</label>
                     <select
                       id="communication"
                       name="preferredCommunication"
@@ -129,7 +129,7 @@ export default function Contact() {
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message" className="form-label">Message</label>
                     <textarea
                       id="message"
                       name="message"
