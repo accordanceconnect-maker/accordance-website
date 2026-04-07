@@ -31,7 +31,7 @@ export function Hero() {
             </p>
 
             <Link href="/contact" className="cta">
-              Engage on a Requirement →
+              Engage on a Requirement
             </Link>
 
           </div>
