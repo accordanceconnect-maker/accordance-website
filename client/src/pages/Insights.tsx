@@ -13,12 +13,11 @@ export default function Insights() {
 
             <span className="label">Insights</span>
 
-            <h1>Observations from experience</h1>
+            <h1>Market observations</h1>
 
             <div className="reading-column">
               <p>
-                Observations drawn from mandate execution, regulatory interpretation,
-                and capital deployment across complex real estate decisions.
+                Market observations from active transactions, corridor movement, and deal execution across commercial real estate.
               </p>
             </div>
 
