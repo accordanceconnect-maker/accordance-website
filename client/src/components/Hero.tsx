@@ -22,7 +22,8 @@ export function Hero() {
           <div className="reading-column">
 
             <h1 id="hero-heading">
-              Retail. Land. Transactions — <br /> structured to close.
+              Retail. Land.<br />
+              Transactions structured to close.
             </h1>
 
             <p className="hero-subline">
@@ -30,7 +31,7 @@ export function Hero() {
             </p>
 
             <Link href="/contact" className="cta">
-              Initiate a Conversation
+              Engage on a Requirement →
             </Link>
 
           </div>
