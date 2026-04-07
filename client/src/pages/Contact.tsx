@@ -11,12 +11,10 @@ export default function Contact() {
 
             <span className="label">Contact</span>
 
-            <h1>Start the conversation.</h1>
+            <h1>Engage on a requirement.</h1>
 
             <p>
-              Whether you are evaluating an acquisition, restructuring an
-              existing portfolio, or seeking expansion clarity, our team
-              is ready to engage.
+              We work with brands, developers, and investors across retail leasing and land transactions. Share your requirement, and we will align on scope and next steps.
             </p>
 
           </div>
@@ -110,7 +108,7 @@ export default function Contact() {
                       <option>Acquisition</option>
                       <option>Divestment</option>
                       <option>Lease Structuring</option>
-                      <option>Advisory & Structuring</option>
+                      <option>Structuring</option>
                       <option>International Real Estate Investment</option>
                       <option>Other</option>
                     </select>
