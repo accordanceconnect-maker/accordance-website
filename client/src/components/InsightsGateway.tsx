@@ -19,7 +19,7 @@ export function InsightsGateway() {
           </p>
 
           <Link href="/insights" className="cta">
-            Explore insights →
+            Explore insights
           </Link>
         </div>
 
