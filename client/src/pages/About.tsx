@@ -18,7 +18,7 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
-                Clarity precedes commitment.
+                In-market. Transaction-led.
               </motion.h2>
 
               <div className="about-intro-copy stack-24">
@@ -27,7 +27,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Accordance India Projects is a commercial real estate advisory firm operating across key and emerging commercial corridors in India.
+                  Accordance India operates across retail leasing and land transactions within active commercial corridors in North India.
                 </motion.p>
 
                 <motion.p
@@ -35,7 +35,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  We advise on commercial, institutional, industrial, and warehousing assets — aligning capital, land, and regulatory position before transactions are undertaken.
+                  We work with brands, developers, and investors, aligning site selection, commercial terms, and transaction structure.
                 </motion.p>
 
                 <motion.p
@@ -43,7 +43,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Our role is to reduce uncertainty before capital, reputation, or time is committed.
+                  Engagements are carried through evaluation, alignment, and execution with clarity on outcome.
                 </motion.p>
               </div>
 
@@ -63,10 +63,10 @@ export default function About() {
               </motion.h2>
 
               <ol className="about-ledger">
-                <li>Understanding intent, capital and scope.</li>
-                <li>Mapping logics, feasibility and strategy.</li>
-                <li>Aligning assets, terms and timing.</li>
-                <li>Executing with long-term defensibility.</li>
+                <li>Evaluate corridors, sites, and transaction fit.</li>
+                <li>Align commercial terms and structure.</li>
+                <li>Coordinate stakeholders and documentation.</li>
+                <li>Execute through to closure.</li>
               </ol>
 
             </div>
@@ -85,11 +85,10 @@ export default function About() {
               </motion.h2>
 
               <ol className="about-principles-ledger">
-                <li><span>Long-term alignment over short-term optimisation.</span></li>
-                <li><span>Deliberate by design. Depth over noise.</span></li>
-                <li><span>Not every opportunity is pursued.</span></li>
-                <li><span>Documentation over assumptions.</span></li>
-                <li><span>Position over promotion.</span></li>
+                <li><span>Alignment before commitment.</span></li>
+                <li><span>Structure before negotiation.</span></li>
+                <li><span>Execution over intent.</span></li>
+                <li><span>Documentation over assumption.</span></li>
               </ol>
 
             </div>
@@ -145,7 +144,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Aanjney Cowshik leads Accordance India Projects, a commercial real estate advisory operating across key and emerging corridors in North India.
+                  Aanjney Cowshik leads Accordance India, working across retail leasing and land transactions in North India.
                 </motion.p>
 
                 <motion.p
@@ -153,7 +152,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  With a background in finance as a Chartered Accountant, his work sits at the intersection of capital structure, land strategy, regulatory positioning, and transaction architecture.
+                  His work focuses on aligning capital, land, and transaction structure across developer, retail, and investor mandates.
                 </motion.p>
 
                 <motion.p
@@ -161,8 +160,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  He advises developers, retailers, and institutional operators on decisions where capital exposure and long-term positioning matter.
-
+                  Engagements involve site evaluation, commercial alignment, and execution across active corridors.
                 </motion.p>
 
                 <motion.p
@@ -170,7 +168,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Deliberate. Structured. Aligned.
+                  Execution-led. Structurally aligned.
                 </motion.p>
 
               </div>
