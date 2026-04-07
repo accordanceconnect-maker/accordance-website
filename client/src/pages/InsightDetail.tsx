@@ -2,7 +2,6 @@ import { useLocation, useParams } from "wouter";
 import { Footer } from "@/components/Footer";
 import { getInsightBySlug } from "@/insights";
 import { Link } from "wouter";
-import { serviceTagMap } from "@/data/serviceTagMap";
 import { insightRedirects } from "@/insights/redirect";
 
 export default function InsightDetail() {
@@ -63,17 +62,6 @@ export default function InsightDetail() {
           <span className="label">Insight</span>
 
           <h1>{meta.title}</h1>
-
-          {/* Service Funnel Chip */}
-          {meta.type === "service" &&
-            meta.serviceTag &&
-            serviceTagMap[meta.serviceTag] && (
-              <Link href={serviceTagMap[meta.serviceTag].href}>
-                <a className="insight-service-chip">
-                  {serviceTagMap[meta.serviceTag].label}
-                </a>
-              </Link>
-            )}
 
           <p>
             {meta.excerpt}
