@@ -9,32 +9,32 @@ const sections: Section[] = [
     items: [
       {
         q: "What is Accordance India Projects?",
-        a: "Accordance is a commercial real estate advisory firm operating across key and emerging commercial corridors in India.\n\nWe advise brands, developers, and investors on leasing, acquisitions, and commercial asset positioning.\n\nOur role is to bring clarity to real estate decisions before capital is committed."
+        a: "Accordance is a commercial real estate firm working across retail leasing and land transactions in active corridors.\n\nWe work with brands, developers, and investors on site selection, commercial alignment, and transaction execution.\n\nEngagements focus on clarity before commitments are made."
       },
       {
         q: "What defines your advisory approach?",
-        a: "Our work begins with evaluation — location logic, regulatory position, commercial terms, and long-term viability.\n\nWe prioritise informed positioning over transactional speed.\n\nEvery engagement is aligned to objective, scope, and commercial intent."
+        a: "Work begins with evaluation — corridor, site, commercial terms, and regulatory position.\n\nDecisions are aligned before movement, not after.\n\nEvery engagement is defined by scope and transaction intent."
       },
       {
         q: "Who typically engages Accordance?",
-        a: "We are engaged by:\n\n• Retail brands expanding into growth corridors\n• Developers structuring commercial inventory\n• Institutional and private investors evaluating assets\n• Family offices assessing capital deployment in real estate\n\nEngagements are selective and objective-led."
+        a: "We are engaged by:\n\n• Retail brands expanding into active corridors\n• Developers positioning commercial assets\n• Investors evaluating acquisitions\n• Family offices deploying capital into real estate\n\nEngagements are selective and mandate-driven."
       }
     ]
   },
   {
-    title: "Advisory & Engagement",
+    title: "Engagement",
     items: [
       {
         q: "What does your advisory typically cover?",
-        a: "Our advisory spans:\n\n• Corridor and location assessment\n• Site identification and evaluation\n• Commercial term review and negotiation support\n• Transaction coordination\n• Statutory and diligence alignment\n\nThe emphasis is considered movement, not reactive execution."
+        a: "Engagement spans:\n\n• Corridor and site evaluation\n• Site identification\n• Commercial term alignment\n• Transaction coordination\n• Statutory and diligence alignment\n\nThe focus is structured movement through to execution."
       },
       {
         q: "Do you represent brands, developers, or investors?",
-        a: "Yes.\n\nWe represent brands seeking expansion, developers positioning commercial supply, and investors evaluating acquisitions — across key and emerging commercial corridors in India.\n\nRepresentation is defined clearly at the outset."
+        a: "Yes.\n\nWe work with brands, developers, and investors across retail leasing and land transactions.\n\nRepresentation is defined clearly at the outset."
       },
       {
         q: "How are engagements structured?",
-        a: "Engagements are structured based on scope, transaction complexity, and alignment requirements.\n\nWe operate through defined representation agreements to ensure clarity of role and accountability throughout the transaction lifecycle."
+        a: "Engagements are structured based on scope and transaction requirements.\n\nWe operate through defined mandates to ensure clarity of role and accountability through execution."
       }
     ]
   },
@@ -43,15 +43,15 @@ const sections: Section[] = [
     items: [
       {
         q: "What transaction formats do you handle?",
-        a: "We handle:\n\n• Retail leasing (high-street, mall, and SCO formats)\n• Commercial asset acquisition\n• Developer-side positioning\n• Strategic portfolio alignment\n\nOur focus remains commercial and capital-sensitive assets."
+        a: "We handle:\n\n• Retail leasing\n• Commercial asset acquisition\n• Developer-side positioning\n• Portfolio alignment\n\nThe focus remains on commercial, transaction-led assets."
       },
       {
         q: "What does your due diligence framework include?",
-        a: "Our review includes:\n\n• Title position and statutory compliance\n• Zoning and land-use validation\n• Lease structure and documentation review\n• Commercial defensibility assessment\n\nSpecialist coordination is undertaken where required."
+        a: "Our review includes:\n\n• Title and statutory position\n• Zoning and land-use validation\n• Lease structure and documentation\n• Commercial defensibility\n\nSpecialist inputs are integrated where required."
       },
       {
         q: "How do you approach risk in commercial real estate transactions?",
-        a: "Risk is addressed through early evaluation of regulatory exposure, commercial terms, and structural alignment.\n\nThe objective is long-term defensibility and stability — not short-term closure."
+        a: "Risk is addressed through early evaluation of regulatory exposure, commercial terms, and structure.\n\nThe objective is stable, defensible transactions — not short-term closure."
       }
     ]
   }
