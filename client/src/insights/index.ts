@@ -20,6 +20,9 @@ import RetailIsSegmentingNotSlowing, {
   meta as RetailIsSegmentingNotSlowingMeta,
 } from "./retail-is-segmenting-not-slowing.mdx";
 
+import LeasingGrowthIsNotWhatItSeems, {
+  meta as LeasingGrowthIsNotWhatItSeemsMeta,
+} from "./leasing-growth-is-not-what-it-seems.mdx";
 /*
 ==========================================================
 CANONICAL INSIGHTS REGISTRY — SPINE CONTROLLED
@@ -146,7 +149,11 @@ export const insights: InsightEntry[] = [
     meta: RetailIsSegmentingNotSlowingMeta as InsightMeta,
     Component: RetailIsSegmentingNotSlowing,
   },
-  
+
+  {
+    meta: LeasingGrowthIsNotWhatItSeemsMeta as InsightMeta,
+    Component: LeasingGrowthIsNotWhatItSeems,
+  },
 ];
 
 /*
